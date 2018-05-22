@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.0
+@version        0.1.1
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -19,10 +19,12 @@
 	--text1: #ccc;       /* #212121 */
 	--text2: #eee;       /* #262626 #1a1a1a*/
 	--text3: #bbb;       /* #595959 gray*/
-	--text4: #aaa;       /* #4c4c4c */
+	--text4: #aaa;       /* #4c4c4c #404040*/
 	--textw: #fff;       /* #000000 */
 	--textb: #000;       /* #ffffff */
 	--border: rgba(0,0,0,.08);
+	--border2: #242424;
+	--border3: #333;
 }
 
 /* text headers titles */
@@ -63,7 +65,7 @@
 }
 /* price */
 .price-btn, .price-text--discount {
-	border: 1px solid #333;
+	border: 1px solid var(--border3);
 }
 .price-btn, .price-text, .price-text--discount {
 	color: var(--text1);
@@ -135,7 +137,27 @@
 .header__countdown {
 	color: var(--textw);
 }
+/* /order */
+.order__title--success {
+	color: #8ac500;
+}
+.order-article {
+	color: var(--text2);
+}
 
+._dropdown__items {
+	background: #262626;
+}
+._dropdown__item, ._dropdown__item-unobtrusive, ._fake_dropdown__item {
+	background: #262626;
+	border-color: var(--border);
+}
+._dropdown__pointer-up:after {
+	background: #262626;
+}
+._dropdown__item:hover, ._fake_dropdown__item:hover {
+	background: #2f2f2f;
+}
 /* /game */
 .productcard-wrapper:before {
 	content: "";
@@ -201,7 +223,7 @@
 	color: var(--text3);
 }
 .filters__search {
-	border: 1px solid #303030;
+	border: 1px solid var(--border3);
 	background: #2c2c2c;
 }
 .filter {
@@ -212,8 +234,26 @@
 	background: var(--bg);
 	color: var(--text2);
 }
+.filter.is-selected,
+.filter__item.is-selected, .filter__item.is-selected--mixed {
+	color: var(--text2);
+}
+.module--filters,
+.filter__item {
+	color: var(--text3);
+}
+.filter-checkbox, .filter-radio, .checkbox, .radio {
+	border: 1px solid #252525;
+	background: #464646;
+}
+.account ._dropdown__items {
+	color: var(--text2);
+}
 .skin-selector__current, .skin-selector__dropdown-icon {
 	color: var(--text2);
+}
+.product-title__flag {
+	background: #555;
 }
 /* /mix */
 .bg_holder:before {
@@ -224,7 +264,7 @@
 	background: linear-gradient(to top,var(--bg) 15%,rgba(0, 0, 0, .2));
 }
 .game {
-	border-bottom: 1px solid #323232;
+	border-bottom: 1px solid var(--border3);
 }
 .rating {
 	color: #ababab;
@@ -233,14 +273,30 @@
 	color: #b5b5b5;
 }
 .mix_cont.first {
-	border-top: 1px solid #323232;
-	border-bottom: 1px solid #323232;
+	border-top: 1px solid var(--border3);
+	border-bottom: 1px solid var(--border3);
 }
 .mix_cont {
-	border-bottom: 1px solid #323232;
+	border-bottom: 1px solid var(--border3);
 }
 .mix_cont .dark_un {
-	color: #b5b5b5;
+	color: var(--text2);
+}
+.mix_cont .count {
+	color: var(--text2);
+	background: rgba(255, 255, 255, .03);
+}
+.first .count {
+	background: rgba(255, 255, 255, .03);
+}
+.mix_cont .votes {
+	color: var(--text2);
+}
+.mix_cont .count_left, .mix_cont .count_right {
+	background: none;
+}
+.refresh {
+	color: var(--text3);
 }
 /* /news */
 .article-section__title, .article__secondary_title {
@@ -250,16 +306,16 @@
 	color: var(--text1);
 }
 .article__lead {
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid var(--border2);
 }
 .archives-switch {
-	border-color: #222;
+	border-color: var(--border2);
 }
 .archives-switch:after {
-	border-left: 1px solid #222;
+	border-left: 1px solid var(--border2);
 }
 .archives-list__article {
-	border-top: 1px solid #222;
+	border-top: 1px solid var(--border2);
 }
 .small-spots .product-row {
 	background: var(--bg2);
@@ -384,13 +440,13 @@ div.big_post_left, div.big_post_right {
 	background: var(--bg-hover);
 }
 .order-message:first-child {
-	border-top: 1px solid #323232;
+	border-top: 1px solid var(--border3);
 }
 .order-message:last-child {
-	border-bottom: 1px solid #323232;
+	border-bottom: 1px solid var(--border3);
 }
 .order-message {
-	border-top: 1px dashed #323232;
+	border-top: 1px dashed var(--border3);
 }
 
 /* /work */
@@ -432,9 +488,78 @@ div.big_post_left, div.big_post_right {
 /* /account/chat */
 
 /* /wallet */
-
+.wallet-currency-selector__currency.is-active {
+	color: var(--text2);
+}
+.wallet-currency-selector__currency {
+	color: var(--text3);
+}
+.wallet-currency-selector {
+	border-bottom: 1px dashed var(--border3);
+}
+.wallet-funds-box {
+	border-top: 1px solid var(--border3);
+	border-bottom: 1px solid var(--border3);
+}
+.wallet-funds-box__amount {
+	color: var(--text4);
+}
+.wallet-header {
+	background: var(--bg);
+	border-bottom: 1px solid var(--bg);
+}
+.wallet-transactions-empty .content {
+	background-color: var(--bg);
+}
+.wallet-amount {
+	border-top: 1px solid var(--border3);
+	color: var(--text4);
+	box-shadow: 0 0 3px 1px rgba(0,0,0,.11);
+	background-color: var(--bg2);
+	vertical-align: top;
+}
+.wallet-amount__separator {
+	border-left: 2px dashed #454545;
+}
+.wallet-amount__active-state {
+	border: 1px solid #212700;
+	background-image: linear-gradient(#4a5a00,#2d3700);
+}
 /* account/settings/ */
+.settings__nav-link.is-active, .settings__nav-link.is-active:hover {
+	background: var(--bg-hover);
+}
+.order-item__header {
+	background: var(--bg2);
+}
+.order-product__price {
+	color: var(--text3);
+}
+.settings-content, .order-header-info {
+	color: var(--text1);
+}
+.settings-item__label {
+	color: var(--text3);
+}
+.settings__nav-svg {
+	filter: invert(1);
+}
+.input {
+	background: #2d2d2d;
+	border: 1px solid var(--border3);
+	color: var(--text1);
+}
+.input:disabled::-webkit-input-placeholder {
+	-webkit-text-fill-color: var(--text1);
+}
+.input::-webkit-input-placeholder {
+	color: var(--text1);
+}
+select {
+	color: var(--text1);
+	background-color: #2d2d2d;
 
+}
 /*  */
 }
 @-moz-document regexp("https://www.gog.com/(?!u|feed|profile).*") {
