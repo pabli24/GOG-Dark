@@ -1,0 +1,453 @@
+/* ==UserStyle==
+@name           GOG.com - Dark Theme
+@namespace      https://github.com/pabli24/GOG.com-Dark-Theme
+@version        0.1.0
+@description    Dark Theme for GOG.com
+@author         Pabli
+@license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+@homepageURL    https://github.com/pabli24/GOG.com-Dark-Theme
+@supportURL     https://github.com/pabli24/GOG.com-Dark-Theme/issues
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.gog.com") {
+
+:root {
+	--bg: #1d1d1d;       /* #ccc */
+	--bg2: #222;         /* #e1e1e1 */
+	--bg3: #1e1e1e;      /* #d2d2d2 */
+	--bg-hover: #2d2d2d; /* #e5e5e5 */
+	--text1: #ccc;       /* #212121 */
+	--text2: #eee;       /* #262626 #1a1a1a*/
+	--text3: #bbb;       /* #595959 gray*/
+	--text4: #aaa;       /* #4c4c4c */
+	--textw: #fff;       /* #000000 */
+	--textb: #000;       /* #ffffff */
+	--border: rgba(0,0,0,.08);
+}
+
+/* text headers titles */
+.big-spots__header, .module-header, .module-header__btn.is-active,
+.gogmix__title, .product-row__title,
+.news-item {
+	color: var(--text2);
+}
+/* top page background */
+.big-spots__blurs:before {
+	background: linear-gradient(to right,var(--bg),rgba(0, 0, 0, 0));
+}
+.big-spots__blurs:after {
+	background: linear-gradient(to left,var(--bg),rgba(0, 0, 0, 0));
+}
+.big-spots__blurs > div:after {
+	background: linear-gradient(to top,var(--bg) 15%,rgba(0, 0, 0, .2));
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+/*  */
+.about-gog {
+	background: #343e48;
+}
+.about-gog__header {
+	background-color: #343e48;
+}
+.about-gog__header:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+.about-gog__header~.about-gog__header {
+	border-color: #29323a;
+}
+.about-gog__icon {
+	text-shadow: 0 0 30px hsla(0, 0%, 0%, 0.75);
+}
+/* price */
+.price-btn, .price-text--discount {
+	border: 1px solid #333;
+}
+.price-btn, .price-text, .price-text--discount {
+	color: var(--text1);
+}
+.price-text--discount {
+	background: #38505c;
+}
+
+.big-spot.is-hovered .price-btn--active,
+.btn--green, .is-buyable.gogmix:hover .price-btn--active, .product-row.is-buyable:hover .price-btn--active {
+	background: linear-gradient(180deg,#5d7100,#354600);
+	color: var(--textw);
+}
+.big-spot.is-hovered .price-btn--active,
+.is-buyable.gogmix:hover .price-btn--active, .product-row.is-buyable:hover .price-btn--active {
+	border-color: #333;
+}
+/*  */
+.product-row--grid,
+.list--grid .product-row,
+.list--rows--no-border .product-row {
+	background: var(--bg2);
+}
+.list--grid .is-owned.gogmix, .list--grid .product-row.is-owned,
+.is-owned.gogmix, .product-row.is-owned {
+	background: var(--bg3);
+}
+/* left column */
+.news-item__title {
+	color: var(--text1);
+}
+.news-item__info {
+	color: var(--text3);
+}
+.news-item:hover {
+	background:  var(--bg-hover);
+}
+/* left right background */
+.module {
+	background: var(--bg2);
+	color: var(--text1);
+	box-shadow: 0 1px 5px rgba(0,0,0,.15);
+}
+/* right column */
+.gogmix, .product-row {
+	border-top: 1px solid var(--border);
+	color: var(--text3);
+}
+.product-row--has-action.gogmix:hover, .product-row--has-card.gogmix:hover, .product-row.product-row--has-action:hover, .product-row.product-row--has-card:hover {
+	background: var(--bg-hover);
+}
+.module__bottom {
+	border-top: 1px solid #272727;
+	color: var(--textw);
+	background: rgba(255, 255, 255, 0.01);
+}
+.module__bottom:not(.no-ho):hover {
+	background: var(--bg-hover);
+}
+/* /promo */
+.promo-columns-wrapper {
+	background: var(--bg);
+	margin-top: 0;
+}
+.header__title {
+	margin-top: 15px;
+	color: var(--textw);
+}
+.header__countdown {
+	color: var(--textw);
+}
+
+/* /game */
+.productcard-wrapper:before {
+	content: "";
+	width: 100%;
+	height: 672px;
+	position: absolute;
+	background: linear-gradient(to top,var(--bg) 15%,rgba(0, 0, 0, .2));
+}
+.header {
+	color: var(--text2);
+}
+.un--body-alt {
+	background-image: linear-gradient(to right,var(--text2),var(--text2));
+}
+.header__os {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-width: 0 1px;
+}
+.module__foot {
+	color: var(--text4);
+}
+.social-btn, .wishlist-btn {
+	color: var(--text4);
+	background: var(--bg2);
+	box-shadow: 0 1px 5px rgba(0,0,0,.15);
+}
+.social-btn.is-wishlisted, .wishlist-btn.is-wishlisted {
+	background: var(--bg2);
+}
+.social-btn:hover, .wishlist-btn:hover {
+	background: var(--bg-hover);
+}
+.module--buy .module__top, .module--buy-series .module__top,
+.quote, .user-review,
+.product-details,
+.game-features__title,
+.requirement, .sysreq,
+.footnotes {
+	color: var(--color2);
+}
+.game-features__icon {
+	filter: invert(1);
+}
+.game-features__item {
+	border-top: 1px solid var(--border);
+}
+.game-features__item:hover {
+	background: var(--bg-hover);
+}
+.list--grid .product-row.product-row--has-action:hover, .list--grid .product-row.product-row--has-card.is-owned:hover, .list--grid .product-row.product-row--has-card:hover {
+	background: var(--bg-hover);
+}
+.user-review__author {
+	color: var(--text4);
+}
+.reviews-pagination-container {
+	color: var(--text4);
+}
+.btn--green:not(.is-spinning):not(.is-disabled):not([disabled]):hover {
+	background: linear-gradient(180deg,#687c00,#5e7d00);
+}
+.filters__search>._search__input {
+	color: var(--text3);
+}
+.filters__search {
+	border: 1px solid #303030;
+	background: #2c2c2c;
+}
+.filter {
+	background: var(--bg2);
+	border-color: #1f1f1f;
+}
+.filters__search-explained {
+	background: var(--bg);
+	color: var(--text2);
+}
+.skin-selector__current, .skin-selector__dropdown-icon {
+	color: var(--text2);
+}
+/* /mix */
+.bg_holder:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(to top,var(--bg) 15%,rgba(0, 0, 0, .2));
+}
+.game {
+	border-bottom: 1px solid #323232;
+}
+.rating {
+	color: #ababab;
+}
+.game p {
+	color: #b5b5b5;
+}
+.mix_cont.first {
+	border-top: 1px solid #323232;
+	border-bottom: 1px solid #323232;
+}
+.mix_cont {
+	border-bottom: 1px solid #323232;
+}
+.mix_cont .dark_un {
+	color: #b5b5b5;
+}
+/* /news */
+.article-section__title, .article__secondary_title {
+	color: var(--text2);
+}
+.article__body, .article__body p {
+	color: var(--text1);
+}
+.article__lead {
+	border-bottom: 1px solid #222;
+}
+.archives-switch {
+	border-color: #222;
+}
+.archives-switch:after {
+	border-left: 1px solid #222;
+}
+.archives-list__article {
+	border-top: 1px solid #222;
+}
+.small-spots .product-row {
+	background: var(--bg2);
+}
+.small-spots .product-row.product-row--has-action:hover, .small-spots .product-row.product-row--has-card.is-owned:hover, .small-spots .product-row.product-row--has-card:hover {
+	background: var(--bg-hover);
+}
+.article__related_topics .product-row {
+	background: var(--bg2);
+}
+.article__related_topics .product-row.product-row--has-action:hover, .article__related_topics .product-row.product-row--has-card.is-owned:hover, .article__related_topics .product-row.product-row--has-card:hover {
+	background: var(--bg-hover);
+}
+.btn--gray {
+	background: linear-gradient(180deg,hsla(0, 0%, 24%, 0.9) 4%,#2c2c2c);
+	color: #cacaca;
+}
+.btn--gray:not(.is-spinning):not(.is-disabled):not([disabled]):hover {
+	background: linear-gradient(180deg,#494949,#3e3e3e);
+}
+/* /forum */
+div.big_post_main {
+	background: var(--bg2);
+	margin-bottom: 0px;
+}
+div.big_post_left, div.big_post_right {
+	width: 0px;
+	height: 0px;
+}
+
+/* /account */
+._cs-left, ._cs-right {
+	background: var(--bg);
+}
+.page-header {
+	color: var(--text3);
+}
+.header__dropdown {
+	color: var(--text2);
+}
+.account__filters-option {
+	color: var(--text2);
+}
+.filter.is-applied {
+	color: var(--text2);
+}
+.list--rows {
+	background: var(--bg2);
+	color: var(--text1);
+}
+.list--rows .product-row__content {
+	color: var(--text3);
+}
+.filter.filter--search {
+	border: 1px solid #303030;
+	background: #2c2c2c;
+}
+.filters__section~.filters__section>.filter {
+	border-color: #1f1f1f;
+}
+.filter.is-contracted:hover {
+	background: #232323;
+}
+.product-btn {
+	box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.25);
+	background-color: #252525;
+}
+.account__products .product-row__label, .product-btn, .user-rectangle__btn {
+	border: 1px solid #373737;
+}
+
+
+.game-details:after {
+	background: linear-gradient(to top,var(--bg) 20%,rgba(0, 0, 0, 0.50));
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+.module-header2__element--selected, .module-header2__dropdown, .module-header2__element-label {
+	color: var(--text2);
+}
+.game-link__right {
+	color: var(--text3);
+}
+.game-details__footer {
+	color: var(--text3);
+	background: rgba(0, 0, 0, 0);
+	border-top: 1px solid #1d1d1d;
+}
+/* /checkout */
+.form__row-key--small-print {
+	color: var(--text3);
+}
+.form__row, .free-wallet {
+	border-top: 1px solid  var(--border);
+}
+.form__row--interactive:hover {
+	background: var(--bg-hover);
+}
+.accordion__body {
+	background: #2b2b2b;
+}
+.accordion__label.is-active {
+	box-shadow: inset 0 -1px 0 var(--border);
+}
+.accordion__body:before {
+	background: #2b2b2b;
+	box-shadow: inset -1px 1px 0 var(--border);
+}
+.form--description {
+	color: var(--text2);
+}
+.order__related-games .product-row {
+	background: var(--bg2);
+	box-shadow: 0 1px 5px rgba(0,0,0,.15);
+}
+.order__related-games .product-row.product-row--has-action:hover, .order__related-games .product-row.product-row--has-card.is-owned:hover, .order__related-games .product-row.product-row--has-card:hover {
+	background: var(--bg-hover);
+}
+.order-message:first-child {
+	border-top: 1px solid #323232;
+}
+.order-message:last-child {
+	border-bottom: 1px solid #323232;
+}
+.order-message {
+	border-top: 1px dashed #323232;
+}
+
+/* /work */
+.sta_container h1 {
+	color: var(--textw);
+}
+.left a, .right a, .single a {
+	color: var(--textw);
+}
+.header h2 {
+	color: var(--text2);
+}
+.vdark_un {
+	color: var(--text2);
+}
+.vdark_un:hover {
+	color: var(--textw);
+}
+.sub-menu__item {
+	color: var(--text2);
+}
+.sub-menu:not(:hover) .btn.sub-menu__button {
+	background: 0 0;
+	color: var(--textw);
+}
+.single {
+	background: #242424;
+}
+.sub-menu {
+	background: #242424;
+}
+.offers__logos {
+	filter: invert(1);
+}
+/* top menu */
+
+/* /account/friends*/
+
+/* /account/chat */
+
+/* /wallet */
+
+/* account/settings/ */
+
+/*  */
+}
+@-moz-document regexp("https://www.gog.com/(?!u|feed|profile).*") {
+/* main background */
+html, body {
+	background: var(--bg);
+	color: var(--text1);
+}
+}
+@-moz-document regexp("https://www.gog.com/(?!mix).*") {
+.content, .wrapper {
+	background-color: var(--bg);
+}
+}
+
+
