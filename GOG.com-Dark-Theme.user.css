@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.1
+@version        0.1.2
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -199,6 +199,9 @@
 	color: var(--color2);
 }
 .game-features__icon {
+	filter: invert(1);
+}
+.bonus__icon {
 	filter: invert(1);
 }
 .game-features__item {
@@ -409,6 +412,16 @@ div.big_post_left, div.big_post_right {
 	background: rgba(0, 0, 0, 0);
 	border-top: 1px solid #1d1d1d;
 }
+
+.module-header__btn {
+	color: var(--text3);
+}
+.wishlist-options__text {
+	color: var(--text3);
+}
+.header-dropdown__items>._dropdown__item {
+	color: var(--text3);
+}
 /* /checkout */
 .form__row-key--small-print {
 	color: var(--text3);
@@ -484,7 +497,9 @@ div.big_post_left, div.big_post_right {
 /* top menu */
 
 /* /account/friends*/
-
+.no-friends__invite-button {
+	color: var(--text2);
+}
 /* /account/chat */
 
 /* /wallet */
@@ -559,6 +574,27 @@ select {
 	color: var(--text1);
 	background-color: #2d2d2d;
 
+}
+.tag-item {
+	background: rgba(0, 0, 0, 0);
+}
+.tag-input-wrapper {
+	border: 1px solid var(--border3);
+	background: #2d2d2d;
+}
+.tag-input-wrapper__input {
+	color: var(--text1);
+}
+.orders-header__search {
+	color: var(--text3);
+}
+.orders-header__search.is-search-active {
+	color: var(--text3);
+	background: #2d2d2d;
+	box-shadow: inset 0 0 0 1px var(--border3), inset 0 1px 3px rgba(0,0,0,.1);
+}
+._search__input {
+	color: var(--text1);
 }
 /*  */
 }
