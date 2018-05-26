@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.2
+@version        0.1.3
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -47,6 +47,29 @@
 	width: 100%;
 	height: 100%;
 }
+
+.frontpage-wrapper:before {
+	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, .3));
+	content: '';
+	position: absolute;
+	width: 100vw;
+	height: 100vw;
+}
+@media (min-width: 801px){
+.frontpage-wrapper:before {
+	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, 0.3));
+}
+}
+@media (min-width: 1367px) {
+.frontpage-wrapper:before {
+	background: linear-gradient(to top,var(--bg) 60%,rgba(0, 0, 0, 0.3));
+}
+}
+@media (min-width: 1681px) {
+.frontpage-wrapper:before {
+	background: linear-gradient(to top,var(--bg) 70%,rgba(0, 0, 0, 0.3));
+}
+}
 /*  */
 .about-gog {
 	background: #343e48;
@@ -62,6 +85,9 @@
 }
 .about-gog__icon {
 	text-shadow: 0 0 30px hsla(0, 0%, 0%, 0.75);
+}
+.footer__dropdown-item {
+	color: var(--text2);
 }
 /* price */
 .price-btn, .price-text--discount {
@@ -137,6 +163,43 @@
 .header__countdown {
 	color: var(--textw);
 }
+
+.module__top {
+	color: var(--text2);
+}
+.list__products .product-row-price--new {
+	color: var(--text2);
+}
+
+.list-category-header {
+	color: var(--text2);
+	background: #262626;
+}
+.list-category-header, .list__products:not(:empty) {
+	border-top: 1px solid var(--border);
+}
+.list-search {
+	border: 1px solid var(--border3);
+	color: var(--text3);
+	background: #2c2c2c;
+}
+.details {
+	color: var(--text2);
+}
+.details-rev__author {
+	color: var(--text4);
+}
+.promo-counter {
+	background: #262626;
+}
+.promo-counter-left {
+	color: var(--text3);
+}
+._checkbox-container:hover .checkbox--green, .checkbox--green.is-selected, .hidden-input:checked+.checkbox--green,
+.subscriptions-list__group-header .subscriptions-option--on .checkbox {
+	background: #405200;
+	border-color: #435500;
+}
 /* /order */
 .order__title--success {
 	color: #8ac500;
@@ -144,7 +207,6 @@
 .order-article {
 	color: var(--text2);
 }
-
 ._dropdown__items {
 	background: #262626;
 }
@@ -204,6 +266,9 @@
 .bonus__icon {
 	filter: invert(1);
 }
+img[src="https://items.gog.com/separator.jpg"] {
+	filter: invert(1);
+}
 .game-features__item {
 	border-top: 1px solid var(--border);
 }
@@ -252,11 +317,45 @@
 .account ._dropdown__items {
 	color: var(--text2);
 }
+.gogmix:first-child > .gogmix__count {
+	background-color: hsla(350, 68%, 30%, 1);
+}
+.gogmix:nth-child(2)>.gogmix__count {
+	background-color: hsla(18, 77%, 40%, 1);
+}
+.gogmix:nth-child(3)>.gogmix__count {
+	background-color: hsla(25, 77%, 40%, 1);
+}
+.gogmix:nth-child(4)>.gogmix__count {
+	background-color: hsla(33, 77%, 40%, 1);
+}
+.gogmix:nth-child(5)>.gogmix__count {
+	background-color: hsla(38, 77%, 40%, 1);
+}
+.gogmix:nth-child(6)>.gogmix__count {
+	background-color: hsla(44, 73%, 40%, 1);
+}
+.gogmix:nth-child(7)>.gogmix__count {
+	background-color: hsla(45, 62%, 40%, 1);
+}
+.gogmix__count {
+	background-color: hsla(53, 35%, 40%, 1);
+}
+
 .skin-selector__current, .skin-selector__dropdown-icon {
 	color: var(--text2);
 }
 .product-title__flag {
 	background: #555;
+}
+/* /redeem */
+.redeem-header__text {
+	color: var(--text1);
+}
+.code-input__input {
+	border: 1px solid var(--border3);
+	color: var(--text2);
+	background: #2d2d2d;
 }
 /* /mix */
 .bg_holder:before {
@@ -413,6 +512,7 @@ div.big_post_left, div.big_post_right {
 	border-top: 1px solid #1d1d1d;
 }
 
+
 .module-header__btn {
 	color: var(--text3);
 }
@@ -421,6 +521,24 @@ div.big_post_left, div.big_post_right {
 }
 .header-dropdown__items>._dropdown__item {
 	color: var(--text3);
+}
+.module-header2__element {
+	color: var(--text3);
+}
+.module-header2__element--action:hover {
+	color: var(--text2);
+}
+.module-header2__element--selected {
+	color: var(--text2);
+}
+.iScrollIndicator {
+	background: rgba(255, 255, 255, 0.18);
+}
+.iScrollIndicator:active, .iScrollIndicator:hover {
+	background: rgba(255, 255, 255, 0.25);
+}
+.skin-selector__item.is-selected {
+	color: var(--text2);
 }
 /* /checkout */
 .form__row-key--small-print {
