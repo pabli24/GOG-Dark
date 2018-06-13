@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.3
+@version        0.1.4
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -107,7 +107,7 @@
 }
 .big-spot.is-hovered .price-btn--active,
 .is-buyable.gogmix:hover .price-btn--active, .product-row.is-buyable:hover .price-btn--active {
-	border-color: #333;
+	border-color: var(--border3);
 }
 /*  */
 .product-row--grid,
@@ -219,6 +219,12 @@
 }
 ._dropdown__item:hover, ._fake_dropdown__item:hover {
 	background: #2f2f2f;
+}
+.order__title {
+	color: var(--textw);
+}
+._search__spinner, ._spinner:after, .btn--gray.is-spinning:after, .module-header2__element:before, .spinner--big, .spinner--big-light, .spinner--small, .spinner--small-light, .top-nav-search>.spinner.show-on-off-canvas {
+	filter: invert(1);
 }
 /* /game */
 .productcard-wrapper:before {
@@ -612,7 +618,6 @@ div.big_post_left, div.big_post_right {
 .offers__logos {
 	filter: invert(1);
 }
-/* top menu */
 
 /* /account/friends*/
 .no-friends__invite-button {
@@ -658,6 +663,18 @@ div.big_post_left, div.big_post_right {
 	border: 1px solid #212700;
 	background-image: linear-gradient(#4a5a00,#2d3700);
 }
+.wallet-transactions__head {
+	font-size: 10px;
+	color: var(--text3);
+	background: var(--bg);
+}
+.wallet-transaction__details--name {
+	color: var(--text2);
+}
+.wallet-transactions__item {
+	border-bottom: 1px solid var(--border3);
+	color: var(--text3);
+}
 /* account/settings/ */
 .settings__nav-link.is-active, .settings__nav-link.is-active:hover {
 	background: var(--bg-hover);
@@ -691,7 +708,6 @@ div.big_post_left, div.big_post_right {
 select {
 	color: var(--text1);
 	background-color: #2d2d2d;
-
 }
 .tag-item {
 	background: rgba(0, 0, 0, 0);
@@ -714,7 +730,19 @@ select {
 ._search__input {
 	color: var(--text1);
 }
-/*  */
+/* /partner/summer_pcgamer */
+.partners__game-list {
+	background: var(--bg2);
+}
+.partners__stream-streamer-button {
+	background: var(--bg2);
+}
+.partners__stream-streamer-button:hover {
+	background: var(--bg-hover);
+}
+
+/* top menu */
+
 }
 @-moz-document regexp("https://www.gog.com/(?!u|feed|profile).*") {
 /* main background */
@@ -728,5 +756,31 @@ html, body {
 	background-color: var(--bg);
 }
 }
-
-
+@-moz-document url-prefix("https://www.gog.com/partner/") {
+.content:before {
+	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, .3));
+	content: '';
+	position: absolute;
+	width: 100vw;
+	height: 100vw;
+}
+.container {
+	z-index: 10;
+	position: relative;
+}
+@media (min-width: 801px){
+.content:before {
+	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, 0.3));
+}
+}
+@media (min-width: 1367px) {
+.content:before {
+	background: linear-gradient(to top,var(--bg) 60%,rgba(0, 0, 0, 0.3));
+}
+}
+@media (min-width: 1681px) {
+.content:before {
+	background: linear-gradient(to top,var(--bg) 70%,rgba(0, 0, 0, 0.3));
+}
+}
+}
