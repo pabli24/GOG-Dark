@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.4
+@version        0.1.5
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -152,10 +152,10 @@
 	background: var(--bg-hover);
 }
 /* /promo */
-.promo-columns-wrapper {
+/* .promo-columns-wrapper {
 	background: var(--bg);
 	margin-top: 0;
-}
+} */
 .header__title {
 	margin-top: 15px;
 	color: var(--textw);
@@ -236,6 +236,9 @@
 }
 .header {
 	color: var(--text2);
+}
+.rating {
+	color: var(--text2)
 }
 .un--body-alt {
 	background-image: linear-gradient(to right,var(--text2),var(--text2));
@@ -320,6 +323,9 @@ img[src="https://items.gog.com/separator.jpg"] {
 	border: 1px solid #252525;
 	background: #464646;
 }
+.filters__dropdowns {
+	background: var(--bg2);
+}
 .account ._dropdown__items {
 	color: var(--text2);
 }
@@ -373,9 +379,6 @@ img[src="https://items.gog.com/separator.jpg"] {
 }
 .game {
 	border-bottom: 1px solid var(--border3);
-}
-.rating {
-	color: #ababab;
 }
 .game p {
 	color: #b5b5b5;
@@ -437,6 +440,9 @@ img[src="https://items.gog.com/separator.jpg"] {
 .article__related_topics .product-row.product-row--has-action:hover, .article__related_topics .product-row.product-row--has-card.is-owned:hover, .article__related_topics .product-row.product-row--has-card:hover {
 	background: var(--bg-hover);
 }
+.article__related_topics .product-row.is-owned {
+	background: var(--bg3);
+}
 .btn--gray {
 	background: linear-gradient(180deg,hsla(0, 0%, 24%, 0.9) 4%,#2c2c2c);
 	color: #cacaca;
@@ -487,6 +493,9 @@ div.big_post_left, div.big_post_right {
 .filter.is-contracted:hover {
 	background: #232323;
 }
+.filter.filter--search>._search__input {
+	color: var(--text3);
+}
 .product-btn {
 	box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.25);
 	background-color: #252525;
@@ -517,7 +526,15 @@ div.big_post_left, div.big_post_right {
 	background: rgba(0, 0, 0, 0);
 	border-top: 1px solid #1d1d1d;
 }
-
+.game-details__galaxy-message {
+	color: var(--text1);
+}
+.game-details__header-icon {
+	filter: invert(1);
+}
+.game-details__section-description {
+	color: var(--text3);
+}
 
 .module-header__btn {
 	color: var(--text3);
@@ -740,7 +757,73 @@ select {
 .partners__stream-streamer-button:hover {
 	background: var(--bg-hover);
 }
-
+/* /work */
+.job-offer-wrapper, .job-listings-footer--menu {
+	background-color: var(--bg);
+}
+.job-listings-footer {
+	background-image: linear-gradient(to right,#262626 0,#1d1d1d 40%,#1d1d1d 60%,#262626 100%);
+}
+.job-offer-description, .job-offer-department, .about-header--light-bg .about-header__menu--big-screen>.about-header__btn {
+	color: var(--text2);
+}
+.about-header--light-bg {
+	color: rgba(255, 255, 255, 0.1);
+}
+.job-company__section--jobs {
+	background-color: var(--bg);
+}
+.offer-wrapper {
+	background: var(--bg2);
+}
+.offer-wrapper:hover {
+	background: var(--bg-hover);
+}
+.job-listings-search-input {
+	background-color: #2c2c2c;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+	color: var(--text3);
+}
+.job-listings-search-box {
+	border: 1px solid #303030;
+}
+/* /galaxy */
+.glx-section--faq, .glx-section--footer, .about-menu-bottom-wrapper {
+	background-color: var(--bg);
+}
+.about-header--dark-bg .about-header__menu--big-screen>.about-header__btn {
+	color: rgba(255, 255, 255, 0.5);
+}
+.about-header--dark-bg {
+	color: rgba(255, 255, 255, 0.08);
+}
+.glx-section--footer .glx-section__inner {
+	color: var(--text3);
+}
+/* /reclaim */
+.star-header {
+	color: var(--textw);
+}
+.star-field__input {
+	border: 1px solid var(--border3);
+	background: #2c2c2c;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+	color: var(--text3);
+}
+.star-field__input.is-error {
+	border-color: var(--border3);
+	background: #2c2c2c;
+}
+.star-field__input::-webkit-input-placeholder {
+	color: var(--text3);
+}
+.product-row.product-placeholder {
+	border: 1px dashed var(--border3);
+	color: var(--text2);
+}
+.product-row.product-placeholder .product-placeholder__text:after {
+	background: var(--border3);
+}
 /* top menu */
 
 }
@@ -756,7 +839,7 @@ html, body {
 	background-color: var(--bg);
 }
 }
-@-moz-document url-prefix("https://www.gog.com/partner/") {
+@-moz-document url-prefix("https://www.gog.com/partner"), url-prefix("https://www.gog.com/reclaim"), url-prefix("https://www.gog.com/promo") {
 .content:before {
 	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, .3));
 	content: '';
