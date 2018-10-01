@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.5
+@version        0.1.6
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -227,6 +227,15 @@
 	filter: invert(1);
 }
 /* /game */
+.product-actions {
+	background-color: rgba(39, 39, 39, 0.9);
+}
+.product-actions-price__final-amount, .product-actions-price__giveaway, .product-actions-price__base-amount {
+	color: var(--text4);
+}
+.productcard-basics__title {
+	color: var(--text2);
+}
 .productcard-wrapper:before {
 	content: "";
 	width: 100%;
@@ -237,8 +246,11 @@
 .header {
 	color: var(--text2);
 }
-.rating {
-	color: var(--text2)
+.rating, .productcard-rating, .productcard-os-support, .productcard-basics__languages {
+	color: var(--text3)
+}
+.productcard-basics__separator {
+	background: var(--text3)
 }
 .un--body-alt {
 	background-image: linear-gradient(to right,var(--text2),var(--text2));
@@ -246,6 +258,15 @@
 .header__os {
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-width: 0 1px;
+}
+.title {
+	border-bottom: 1px solid var(--border2);
+}
+.languages__row, .table__row, .table-header, .average-body {
+	border-bottom: 1px solid var(--border3);
+}
+.languages {
+	color: var(--text2);
 }
 .module__foot {
 	color: var(--text4);
@@ -266,11 +287,15 @@
 .product-details,
 .game-features__title,
 .requirement, .sysreq,
-.footnotes {
+.footnotes,
+.features {
 	color: var(--color2);
 }
-.game-features__icon {
+.game-features__icon, .goodies__icon--description, .features-item__feature-icon--single, .languages__icon--more-languages {
 	filter: invert(1);
+}
+.languages__icon, .system-requirements-selector__icon {
+	fill: #fff;
 }
 .bonus__icon {
 	filter: invert(1);
@@ -359,6 +384,33 @@ img[src="https://items.gog.com/separator.jpg"] {
 }
 .product-title__flag {
 	background: #555;
+}
+
+
+.average-item, average-item, .average-item__textline {
+	color: var(--text4);
+}
+.sort-by__title {
+	color: var(--text3);
+}
+.filter__title {
+	color: var(--text2);
+}
+.filter__item, .option__hr {
+	border-bottom: 1px solid var(--border3);
+	color: var(--text3);
+}
+.review__title, .review__profile-name {
+	color: var(--text1);
+}
+.review__extra, .review__profile-stats {
+	color: var(--text3);
+}
+.review__text, .review__was-helpful-button {
+	color: var(--text2);
+}
+.paginator-container .page-indicator {
+	color: var(--text3);
 }
 /* /redeem */
 .redeem-header__text {
