@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.6
+@version        0.1.7
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -119,6 +119,41 @@
 .is-owned.gogmix, .product-row.is-owned {
 	background: var(--bg3);
 }
+
+
+.product-tile__content {
+	background: hsla(0, 0%, 15%, 0.6);
+}
+.section-title--with-border {
+	border-bottom: 1px solid var(--border3);
+}
+/* discover games  */
+.tabbed-section__head {
+	border-bottom: 1px solid var(--border3);
+}
+.product-tile--list:not(.product-tile--active) {
+	border-bottom: 1px solid var(--border3);
+}
+.tabbed-section__tab {
+	color: var(--text3);
+	fill: var(--text3);
+}
+.product-tile--list:not(.product-tile--active) .product-tile__title,
+.product-tile__price-discounted {
+	color: var(--text4);
+}
+.icon-wrapper-icon {
+	filter: invert(1);
+}
+.discover-games-more {
+	border: 1px solid var(--border3);
+}
+.discover-games-more__text {
+	color: var(--text3);
+}
+.discover-games-more__icon {
+	fill: var(--text3);
+}
 /* left column */
 .news-item__title {
 	color: var(--text1);
@@ -233,6 +268,11 @@
 .product-actions-price__final-amount, .product-actions-price__giveaway, .product-actions-price__base-amount {
 	color: var(--text4);
 }
+/* .edition-picker__trigger {
+	background-image: linear-gradient(-180deg,var(--bg),var(--bg2));
+	border: 1px solid rgba(64,64,64,.5);
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.13);
+} */
 .productcard-basics__title {
 	color: var(--text2);
 }
@@ -262,8 +302,11 @@
 .title {
 	border-bottom: 1px solid var(--border2);
 }
-.languages__row, .table__row, .table-header, .average-body {
+.languages__row, .table__row, .table-header, .average-body, .goodies__row:last-child .goodies__cell {
 	border-bottom: 1px solid var(--border3);
+}
+.goodies__label.is-hovering {
+	border-top: 1px solid var(--border3);
 }
 .languages {
 	color: var(--text2);
@@ -291,7 +334,7 @@
 .features {
 	color: var(--color2);
 }
-.game-features__icon, .goodies__icon--description, .features-item__feature-icon--single, .languages__icon--more-languages {
+.game-features__icon, .goodies__icon--description, .features-item__feature-icon, .languages__icon--more-languages {
 	filter: invert(1);
 }
 .languages__icon, .system-requirements-selector__icon {
@@ -379,14 +422,34 @@ img[src="https://items.gog.com/separator.jpg"] {
 	background-color: hsla(53, 35%, 40%, 1);
 }
 
+
+.dlcs .product-tile--list:not(.product-tile--active) .product-tile__title {
+	color: var(--text4);
+}
+.dlcs .product-tile--list:not(.product-tile--active) {
+	border-bottom: 1px solid var(--border3);
+}
 .skin-selector__current, .skin-selector__dropdown-icon {
 	color: var(--text2);
 }
 .product-title__flag {
 	background: #555;
 }
-
-
+.description .module {
+	background-color: rgba(255, 255, 255, 0.1)!important;
+}
+.goodies__cell.is-selected {
+	border-left: 1px solid #9f82a0;
+	border-right: 1px solid #9f82a0;
+	background: rgba(255, 255, 255, 0.02);
+}
+.goodies__cell.is-hovering {
+	background: rgba(255, 255, 255, 0.02);
+}
+.goodies__label.is-selected {
+	border-top: 1px solid #9f82a0;
+	color: #78387b;
+}
 .average-item, average-item, .average-item__textline {
 	color: var(--text4);
 }
@@ -400,13 +463,13 @@ img[src="https://items.gog.com/separator.jpg"] {
 	border-bottom: 1px solid var(--border3);
 	color: var(--text3);
 }
-.review__title, .review__profile-name {
+.review__title, .review__profile-name, .review-new__add-button {
 	color: var(--text1);
 }
 .review__extra, .review__profile-stats {
 	color: var(--text3);
 }
-.review__text, .review__was-helpful-button {
+.review__text, .reviews__info, .review__was-helpful-button {
 	color: var(--text2);
 }
 .paginator-container .page-indicator {
