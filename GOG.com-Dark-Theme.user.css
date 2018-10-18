@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.7
+@version        0.1.8
 @description    Dark Theme for GOG.com
 @author         Pabli
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -29,7 +29,7 @@
 
 /* text headers titles */
 .big-spots__header, .module-header, .module-header__btn.is-active,
-.gogmix__title, .product-row__title,
+.gogmix__title, .product-row__title, .header__title>strong,
 .news-item {
 	color: var(--text2);
 }
@@ -89,6 +89,9 @@
 .footer__dropdown-item {
 	color: var(--text2);
 }
+.carousel-pagination.big-arrows .arrow-icon {
+	fill: #fff;
+}
 /* price */
 .price-btn, .price-text--discount {
 	border: 1px solid var(--border3);
@@ -120,9 +123,18 @@
 	background: var(--bg3);
 }
 
-
-.product-tile__content {
-	background: hsla(0, 0%, 15%, 0.6);
+.product-tile__content,
+.product-tile--active .product-tile__content {
+	background: var(--bg2);
+}
+.product-tile--list.product-tile--active .product-tile__title {
+	color: var(--text4);
+}
+.product-tile--list.product-tile--active .product-tile__content {
+	background: var(--bg2);
+}
+.product-tile--list.product-tile--active {
+	border-bottom: 1px solid var(--border3);
 }
 .section-title--with-border {
 	border-bottom: 1px solid var(--border3);
