@@ -8,9 +8,7 @@ You need [Stylus](https://add0n.com/stylus.html) extension
 * [Userstyles.org](https://userstyles.org/styles/160338/gog-com-dark-theme)
 
 ## Screenshots
-![](https://i.imgur.com/1AEVonq.jpg)
-
-![](https://i.imgur.com/8r3P9wR.jpg)
+![](https://i.imgur.com/U7dPTZS.png)
 
 ## My other userstyles
 https://userstyles.org/users/291236
