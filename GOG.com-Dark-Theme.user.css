@@ -326,6 +326,13 @@
 .product-actions {
 	background-color: rgba(39, 39, 39, 0.9);
 }
+.product-actions__playable-after {
+	background: rgba(39, 39, 39, 0.9);
+	color: var(--text2);
+}
+.product-actions__playable-after-icon {
+	fill: var(--text3);
+}
 .product-actions-price__final-amount, .product-actions-price__giveaway, .product-actions-price__base-amount {
 	color: var(--text4);
 }
