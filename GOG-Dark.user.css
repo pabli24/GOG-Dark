@@ -1,35 +1,37 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG.com-Dark-Theme
-@version        0.1.9
+@version        0.2.0
 @description    Dark Theme for GOG.com
-@author         Pabli
+@author         Pabli (https://github.com/pabli24)
 @license        CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-@homepageURL    https://github.com/pabli24/GOG.com-Dark-Theme
-@supportURL     https://github.com/pabli24/GOG.com-Dark-Theme/issues
+@homepageURL    https://github.com/pabli24/GOG-Dark
+@supportURL     https://github.com/pabli24/GOG-Dark/issues
+@preprocessor   stylus
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://www.gog.com") {
 
 :root {
-	--bg: #1d1d1d;       /* #ccc */
-	--bg2: #222;         /* #e1e1e1 */
-	--bg3: #1e1e1e;      /* #d2d2d2 */
-	--bg-hover: #2d2d2d; /* #e5e5e5 */
-	--text1: #ccc;       /* #212121 */
-	--text2: #eee;       /* #262626 #1a1a1a*/
-	--text3: #bbb;       /* #595959 gray*/
-	--text4: #aaa;       /* #4c4c4c #404040*/
-	--textw: #fff;       /* #000000 */
-	--textb: #000;       /* #ffffff */
-	--border: rgba(0,0,0,.08);
-	--border2: #242424;
-	--border3: #333;
+	--bg:        #1d1d1d;             /* #ccc */
+	--bg2:       #222;                /* #e1e1e1 */
+	--bg3:       #1e1e1e;             /* #d2d2d2 */
+	--bg-hover:  #2d2d2d;             /* #e5e5e5 */
+	--text1:     #ccc;                /* #212121 */
+	--text2:     #eee;                /* #262626 #1a1a1a*/
+	--text3:     #bbb;                /* #595959 gray*/
+	--text4:     #aaa;                /* #4c4c4c #404040*/
+	--textw:     #fff;                /* #000000 */
+	--textb:     #000;                /* #ffffff */
+	--textp:     #fba6ff;             /* #78387b #86328a*/
+	--border:    rgba(0,0,0,.08);
+	--border2:   #242424;
+	--border3:   #333;
 }
 
 /* text headers titles */
 .big-spots__header, .module-header, .module-header__btn.is-active,
-.gogmix__title, .product-row__title, .header__title>strong,
+.gogmix__title, .product-row__title, .product-tile__title, .header__title>strong,
 .news-item {
 	color: var(--text2);
 }
@@ -92,6 +94,15 @@
 .carousel-pagination.big-arrows .arrow-icon {
 	fill: #fff;
 }
+.carousel-pagination__page {
+	background: rgba(255, 255, 255, 0.2);
+}
+.galaxy-section {
+	color: var(--text4);
+}
+.galaxy-tooltip__trigger {
+	color: var(--textp);
+}
 /* price */
 .price-btn, .price-text--discount {
 	border: 1px solid var(--border3);
@@ -119,7 +130,8 @@
 	background: var(--bg2);
 }
 .list--grid .is-owned.gogmix, .list--grid .product-row.is-owned,
-.is-owned.gogmix, .product-row.is-owned {
+.is-owned.gogmix, .product-row.is-owned,
+.order__related-games .product-row.is-owned {
 	background: var(--bg3);
 }
 .product-tile__label--in-library {
@@ -139,13 +151,17 @@
 .product-tile--active .product-tile__content,
 .catalog__body--slide-desktop .product-tile__content,
 .catalog__body--slide-desktop .product-tile--active .product-tile__content,
-.catalog__body--slide-desktop .product-tile__title {
+.catalog__body--slide-desktop .product-tile__title,
+body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile__content {
 	background: var(--bg2);
 }
-.product-tile--list.product-tile--active .product-tile__title {
+.product-tile--list.product-tile--active .product-tile__title,
+body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile__title,
+body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile__price-discounted {
 	color: var(--text4);
 }
-.product-tile--list.product-tile--active .product-tile__content {
+.product-tile--list.product-tile--active .product-tile__content,
+body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile--active .product-tile__content {
 	background: var(--bg2);
 }
 .product-tile--list.product-tile--active {
@@ -220,6 +236,8 @@
 .sort-by-title {
 	color: var(--text4);
 }
+
+.product-tile__cover,
 .catalog__body--slide-desktop .product-tile__cover {
 	background: var(--bg3);
 }
@@ -227,7 +245,8 @@
 	border-top: transparent;
 	border-bottom: 1px solid var(--border3);
 }
-.filter__item:not(:first-child) {
+.filter__item:not(:first-child),
+.catalog__sidebar > .filter__item ~ .filter__item {
 	border-top: 1px solid var(--border3);
 }
 .catalog__paginator-wrapper {
@@ -279,6 +298,9 @@
 	color: var(--text3);
 	background: #2c2c2c;
 }
+.table-header, .table__row-label {
+	color: var(--text1);
+}
 .details {
 	color: var(--text2);
 }
@@ -323,6 +345,34 @@
 	filter: invert(1);
 }
 /* /game */
+.owned-status {
+	background-color: var(--border3);
+	color: var(--text3);
+}
+.edition-picker__trigger {
+	background-image: none;
+	background-color: var(--bg2);
+}
+.edition-picker-list__item:hover {
+	background: var(--bg-hover);
+}
+.dropdown__layer {
+	background: var(--bg2);
+}
+.edition-picker-list__item {
+	border-bottom: 1px solid var(--border2);
+	border-top: 1px solid var(--border2);
+}
+.edition-picker__selected-edition,
+.edition-picker-list__item.is-selected .edition-picker-list__edition-name {
+	color: var(--textp);
+}
+.edition-picker__trigger-icon {
+	fill: var(--textp);
+}
+.edition-picker-list__item.is-selected .edition-picker-list__checkbox {
+	border-color: var(--textp);
+}
 .product-actions {
 	background-color: rgba(39, 39, 39, 0.9);
 }
@@ -336,20 +386,14 @@
 .product-actions-price__final-amount, .product-actions-price__giveaway, .product-actions-price__base-amount {
 	color: var(--text4);
 }
-/* .edition-picker__trigger {
-	background-image: linear-gradient(-180deg,var(--bg),var(--bg2));
-	border: 1px solid rgba(64,64,64,.5);
-	box-shadow: 0 1px 3px 0 rgba(0,0,0,.13);
-} */
+.productcard-slider-pagination__page-marker::before {
+	background: rgba(255, 255, 255, 0.2);
+}
 .productcard-basics__title {
 	color: var(--text2);
 }
-.productcard-wrapper:before {
-	content: "";
-	width: 100%;
-	height: 672px;
-	position: absolute;
-	background: linear-gradient(to top,var(--bg) 15%,rgba(0, 0, 0, .2));
+.productcard-background::before {
+	background: linear-gradient(180deg,hsla(0, 0%, 0%, 0) 0, var(--bg));
 }
 .productcard-slider__nav-icon {
 	color: rgba(255, 255, 255, 0.2);
@@ -373,6 +417,12 @@
 .title {
 	border-bottom: 1px solid var(--border2);
 }
+.details__separator {
+	background: var(--border2);
+}
+.description hr {
+	border-bottom: 1px solid var(--border2);
+}
 .languages__row, .table__row, .table-header, .average-body, .goodies__row:last-child .goodies__cell {
 	border-bottom: 1px solid var(--border3);
 }
@@ -392,7 +442,18 @@
 }
 .goodies__label.is-selected {
 	border-top: 1px solid #9f82a0;
-	color: #78387b;
+	color: var(--textp);
+}
+.goodies__edition.is-selected .goodies__checkbox {
+	border-color: var(--textp);
+}
+.goodies__edition.is-selected .goodies__checkbox::before,
+.system-requirements-selector__item--selected::before {
+	background: var(--textp);
+}
+.goodies__cell.is-selected .goodies__icon--tick,
+.system-requirements-selector__item--selected .system-requirements-selector__icon, .system-requirements-selector__item:hover .system-requirements-selector__icon {
+	fill: var(--textp);
 }
 .languages {
 	color: var(--text2);
@@ -420,10 +481,24 @@
 .features {
 	color: var(--color2);
 }
-.game-features__icon, .goodies__icon--description, .features-item__feature-icon, .languages__icon--more-languages {
+.details__feature-icon {
+	&--achievements,
+	&--cloud-saves,
+	&--in-development,
+	^[0] {
+		filter: invert(1)
+	}
+}
+/*.ic-svg*/
+.why-gog__item-icon,
+.game-features__icon, 
+.goodies__icon--description, 
+.features-item__feature-icon, 
+.languages__icon--more-languages,
+.details__languages-icon {
 	filter: invert(1);
 }
-.languages__icon, .system-requirements-selector__icon {
+.languages__icon, .system-requirements-selector__icon, .goodies__icon--status {
 	fill: #fff;
 }
 .bonus__icon {
@@ -508,6 +583,12 @@ img[src="https://items.gog.com/separator.jpg"] {
 	background-color: hsla(53, 35%, 40%, 1);
 }
 
+.average-item--colored, .sort-by__selected, .sort-dropdown__text--selected, .filter__item--has-selection .filter__title {
+	color: var(--textp);
+}
+.sort-by__selected-icon, .sort-dropdown__icon--selected, .filter__clear, .filter__item--has-selection .filter__chevron, .option-icon--selected {
+	fill: var(--textp);
+}
 
 .dlcs .product-tile--list:not(.product-tile--active) .product-tile__title {
 	color: var(--text4);
@@ -1025,7 +1106,7 @@ select {
 }
 @-moz-document regexp("https://www.gog.com/(?!u|feed|profile).*") {
 /* main background */
-html, body {
+body {
 	background: var(--bg);
 	color: var(--text1);
 }
