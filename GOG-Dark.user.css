@@ -171,6 +171,9 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 	border-bottom: 1px solid var(--border3);
 }
 /* discover games  */
+.section-title__title-wrapper {
+	color: var(--text3);
+}
 .tabbed-section__head {
 	border-bottom: 1px solid var(--border3);
 }
