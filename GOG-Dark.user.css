@@ -193,6 +193,7 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 }
 .discover-games-more {
 	border: 1px solid var(--border3);
+	background: var(--bg);
 }
 .discover-games-more__text {
 	color: var(--text3);
