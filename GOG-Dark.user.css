@@ -97,11 +97,16 @@
 .carousel-pagination__page {
 	background: rgba(255, 255, 255, 0.2);
 }
-.galaxy-section {
+.galaxy-section,
+.tooltip-content__text {
 	color: var(--text4);
 }
-.galaxy-tooltip__trigger {
+.galaxy-tooltip__trigger,
+.tooltip-content__header {
 	color: var(--textp);
+}
+.tooltip-icon-wrapper--icon {
+	stroke: var(--textp);
 }
 /* price */
 .price-btn, .price-text--discount {
