@@ -736,6 +736,13 @@ div.big_post_left, div.big_post_right {
 	width: 0px;
 	height: 0px;
 }
+.user__data, .user__item--info, .user__item--status, .user__warning-item {
+	background: var(--bg2);
+	color: var(--text2);
+}
+ .user__item--action:hover {
+	background: var(--bg-hover);
+}
 
 /* /account */
 ._cs-left, ._cs-right {
