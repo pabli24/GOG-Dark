@@ -72,6 +72,26 @@
 	background: linear-gradient(to top,var(--bg) 70%,rgba(0, 0, 0, 0.3));
 }
 }
+/* search */
+.menu-search__result {
+	background: var(--bg2);
+}
+.menu-product__title {
+	color: var(--text2);
+}
+.menu-product .menu-product__price-btn {
+	border: 1px solid var(--text3);
+	color: var(--text2);
+}
+.menu-product {
+	border-bottom: 1px solid var(--text3);
+}
+.menu-product:hover {
+	background: var(--bg-hover)
+}
+.highlighted {
+	background: #867400;
+}
 /*  */
 .about-gog {
 	background: #343e48;
