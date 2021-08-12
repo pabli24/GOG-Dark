@@ -74,6 +74,9 @@
 }
 /* search */
 .menu-search__result {
+	background: var(--bg3);
+}
+.menu-search__result.is-focused {
 	background: var(--bg2);
 }
 .menu-product__title {
