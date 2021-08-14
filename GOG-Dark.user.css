@@ -1024,6 +1024,10 @@ select {
 ._search__input {
 	color: var(--text1);
 }
+/* user wishlist */
+.empty-message__big, .empty-message__small {
+	color: var(--text1);
+}
 /* /partner/summer_pcgamer */
 .partners__game-list {
 	background: var(--bg2);
