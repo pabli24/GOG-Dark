@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG-Dark
-@version        0.2.2
+@version        0.2.3
 @description    Dark Theme for GOG.com
 @author         Pabli (https://github.com/pabli24)
 @license        CC-BY-SA-4.0
@@ -12,11 +12,47 @@
 
 @-moz-document url-prefix("https://www.gog.com") {
 
+/* official dark theme body.dark-theme */
+body {
+	--c-background: #212121 !important;
+	--c-accent: #c99aff !important;
+	--c-accent-supportive: #b370ff !important;
+	--c-accent-contrast: black !important;
+	--c-ui-primary: #303030 !important;
+	--c-ui-primary--hover-lighten: #3d3d3d !important;
+	--c-ui-primary--active-lighten: #565656 !important;
+	--c-ui-tertiary: #404040 !important;
+	--c-text-primary: #f2f2f2 !important;
+	--c-text-secondary: #ededed !important;
+	--c-text-tertiary: #d9d9d9 !important;
+	--c-contrast: white !important;
+	--c-contrast-85: rgba(255, 255, 255, .85) !important;
+	--c-contrast-20: rgba(255, 255, 255, .2) !important;
+	--c-contrast-15: rgba(255, 255, 255, .15) !important;
+	--c-contrast-10: rgba(255, 255, 255, .1) !important;
+	--c-ui-hover: rgba(201, 154, 255, .7) !important;
+	--c-button-primary-disabled-content: rgba(255, 255, 255, .85) !important;
+	--gradient-button-accent-body: linear-gradient(180deg, #d6b2ff, #c99aff) !important;
+	--gradient-button-accent-border: linear-gradient(180deg, #e1c7ff, #c58bff) !important;
+	--gradient-button-accent-disabled: linear-gradient(180deg, rgba(214, 178, 255, .3), rgba(201, 154, 255, .3)) !important;
+	--c-button-accent-content: black !important;
+	--c-button-accent-pressed-body: #c99aff !important;
+	--c-button-accent-pressed-border: #c58bff !important;
+	--c-button-accent-disabled-content: rgba(255, 255, 255, .85) !important;
+	--gradient-button-secondary-body: linear-gradient(180deg, #6b6b6b, #585858) !important;
+	--gradient-button-secondary-border: linear-gradient(180deg, #848484, #585858) !important;
+	--gradient-button-secondary-disabled: linear-gradient(180deg, rgba(242, 242, 242, .3), rgba(237, 237, 237, .3)) !important;
+	--c-button-secondary-content: white !important;
+	--c-button-secondary-pressed-body: #585858 !important;
+	--c-button-secondary-pressed-border: #404040 !important;
+	--c-button-secondary-disabled-content: rgba(255, 255, 255, .85) !important;
+}
+
 :root {
 	--bg:        #1d1d1d;             /* #ccc */
 	--bg2:       #222;                /* #e1e1e1 */
 	--bg3:       #1e1e1e;             /* #d2d2d2 */
-	--bg-hover:  #2d2d2d;             /* #e5e5e5 */
+	--bg-hover:  #2d2d2d;             /* #e5e5e5 #ececec*/
 	--text1:     #ccc;                /* #212121 */
 	--text2:     #eee;                /* #262626 #1a1a1a*/
 	--text3:     #bbb;                /* #595959 gray*/
@@ -120,6 +156,12 @@
 .carousel-pagination__page {
 	background: rgba(255, 255, 255, 0.2);
 }
+.galaxy-section-wrapper {
+	box-shadow: 0 -1px 0 0 rgba(255, 255, 255, .1), 0 1px 0 0 rgba(255, 255, 255, .1);
+}
+.explore-galaxy {
+	border-left: 1px solid var(--border3);
+}
 .galaxy-section,
 .tooltip-content__text {
 	color: var(--text4);
@@ -131,6 +173,11 @@
 .tooltip-icon-wrapper--icon {
 	stroke: var(--textp);
 }
+.custom-section__flashdeals-counter-wrapper {
+	border: 2px dashed var(--textp);
+	color: var(--textp);
+}
+
 /* price */
 .price-btn, .price-text--discount {
 	border: 1px solid var(--border3);
@@ -183,6 +230,9 @@
 body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile__content {
 	background: var(--bg2);
 }
+.product-tile:hover .product-tile__content {
+	background: var(--bg-hover);
+}
 .product-tile--list.product-tile--active .product-tile__title,
 body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile__title,
 body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile__price-discounted {
@@ -213,11 +263,14 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 	fill: var(--text3);
 }
 .product-tile--list:not(.product-tile--active) .product-tile__title,
-.product-tile__price-discounted,
+.product-tile__price-discounted, .product-tile__price,
 .product-tile__no-buy-block-slug,
 .catalog__body--slide-desktop .product-tile__price-discounted,
 .catalog__body--slide-desktop .product-tile__no-buy-block-slug {
 	color: var(--text4);
+}
+.product-tile__platforms-item {
+	fill: var(--text4);
 }
 .icon-wrapper-icon {
 	filter: invert(1);
@@ -264,7 +317,12 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .module__bottom:not(.no-ho):hover {
 	background: var(--bg-hover);
 }
+
 /* games store */
+[_nghost-gogcom-store-c29] {
+	color: var(--text1);  /* dlc label */
+}
+
 .sort-by-title {
 	color: var(--text4);
 }
