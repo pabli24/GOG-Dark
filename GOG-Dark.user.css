@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GOG.com - Dark Theme
 @namespace      https://github.com/pabli24/GOG-Dark
-@version        0.2.4
+@version        0.2.5
 @description    Dark Theme for GOG.com
 @author         Pabli (https://github.com/pabli24)
 @license        CC-BY-SA-4.0
@@ -1249,13 +1249,26 @@ select {
 	border-bottom: 1px solid var(--border3);
 	background: var(--bg); //#f2f2f2
 }
+.menu-cart-item, .menu-notifications-empty, .menu-friends-empty, .menu-cart-empty {
+	background: var(--bg2);
+	color: var(--text3);
+}
+.menu-notifications-empty__line, .menu-friends-empty__line, .menu-cart-empty__line {
+	background: var(--border3);
+}
 .menu-header__label {
 	color: var(--text4);
 }
 .menu-account__user-name {
 	color: var(--text2);
 }
+.menu-header__items {
+	color: var(--text2);
+}
 .menu-submenu-link {
+	color: var(--text4);
+}
+.menu-cart-item__price {
 	color: var(--text4);
 }
 .menu-submenu-separator {
