@@ -581,6 +581,10 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .social-btn:hover, .wishlist-btn:hover {
 	background: var(--bg-hover);
 }
+.go-to-library-button {
+	background: linear-gradient(180deg,var(--bg2),var(--bg3));
+	box-shadow: 0 2px 4px rgba(255,255,255,.15);
+}
 .module--buy .module__top, .module--buy-series .module__top,
 .quote, .user-review,
 .product-details,
@@ -601,6 +605,7 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 /*.ic-svg*/
 .game-features__icon, 
 .goodies__icon--description, 
+.go-to-library-button__wrapper .button__icon,
 .features-item__feature-icon, 
 .languages__icon--more-languages,
 .details__languages-icon {
