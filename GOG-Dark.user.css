@@ -142,6 +142,9 @@ body {
 .highlighted {
 	background: #867400;
 }
+.menu-search__no-results {
+	background: var(--bg2);
+}
 /*  */
 .about-gog {
 	background: #343e48;
