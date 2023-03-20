@@ -1,18 +1,33 @@
 /* ==UserStyle==
-@name           GOG.com - Dark Theme
-@namespace      https://github.com/pabli24/GOG-Dark
-@version        0.2.6
-@description    Dark Theme for GOG.com
-@author         Pabli (https://github.com/pabli24)
-@license        CC-BY-SA-4.0
-@homepageURL    https://github.com/pabli24/GOG-Dark
-@supportURL     https://github.com/pabli24/GOG-Dark/issues
-@preprocessor   stylus
+@name         GOG.com - Dark Theme
+@namespace    https://github.com/pabli24/GOG-Dark
+@version      0.3.0
+@description  Dark Theme for GOG.com
+@author       Pabli (https://github.com/pabli24)
+@license      CC-BY-SA-4.0
+@homepageURL  https://github.com/pabli24/GOG-Dark
+@supportURL   https://github.com/pabli24/GOG-Dark/issues
+@preprocessor stylus
+@var          checkbox sb       "Dark scrollbar"   1
+@var          color    bg1      "Background 1"     #1d1d1d
+@var          color    bg2      "Background 2"     #222
+@var          color    bg3      "Background 3"     #1e1e1e
+@var          color    bgh      "Background hover" #2d2d2d
+@var          color    text1    "Text 1"           #ccc
+@var          color    text2    "Text 2"           #eee
+@var          color    text3    "Text 3"           #bbb
+@var          color    text4    "Text 4"           #aaa
+@var          color    textw    "Text white"       #fff
+@var          color    textb    "Text black"       #000
+@var          color    textp    "Text pink"        #fba6ff
+@var          color    border1  "Border 1"         rgba(0,0,0,.08)
+@var          color    border2  "Border 2"         #242424
+@var          color    border3  "Border 3"         #333
 ==/UserStyle== */
 
 @-moz-document domain("gog.com") {
 
-/* official dark theme body.dark-theme */
+/* official dark theme /games body.dark-theme */
 body {
 	--c-background: #212121 !important;
 	--c-accent: #c99aff !important;
@@ -49,22 +64,45 @@ body {
 }
 
 :root {
-	color-scheme: dark;
-	--bg:        #1d1d1d;             /* #ccc */
-	--bg2:       #222;                /* #e1e1e1 */
-	--bg3:       #1e1e1e;             /* #d2d2d2 */
-	--bg-hover:  #2d2d2d;             /* #e5e5e5 #ececec*/
-	--text1:     #ccc;                /* #212121 */
-	--text2:     #eee;                /* #262626 #1a1a1a*/
-	--text3:     #bbb;                /* #595959 gray*/
-	--text4:     #aaa;                /* #4c4c4c #404040*/
-	--textw:     #fff;                /* #000000 */
-	--textb:     #000;                /* #ffffff */
-	--textp:     #fba6ff;             /* #78387b #86328a*/
-	--border:    rgba(0,0,0,.08);
-	--border2:   #242424;
-	--border3:   #333;
+// color-scheme: dark;
+	--bg:       bg1      // #1d1d1d;             #ccc
+	--bg2:      bg2      // #222;                #e1e1e1
+	--bg3:      bg3      // #1e1e1e;             #d2d2d2
+	--bg-hover: bgh      // #2d2d2d;             #e5e5e5 #ececec
+	--text1:    text1    // #ccc;                #212121
+	--text2:    text2    // #eee;                #262626 #1a1a1a
+	--text3:    text3    // #bbb;                #595959 gray
+	--text4:    text4    // #aaa;                #4c4c4c #404040
+	--textw:    textw    // #fff;                #000000
+	--textb:    textb    // #000;                #ffffff
+	--textp:    textp    // #fba6ff;             #78387b #86328a
+	--border:   border1  // rgba(0,0,0,.08);
+	--border2:  border2  // #242424;
+	--border3:  border3  // #333;
 }
+
+if sb {
+	//chrome
+	::-webkit-scrollbar {
+		width: 8px
+		background-color: rgba(0, 0, 0, 0)
+	} 
+	::-webkit-scrollbar-thumb {
+		background-color: #444
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #777 !important
+	}
+	::-webkit-scrollbar-corner {
+		background: #444
+	}
+	//firefox
+	html {
+		scrollbar-color: #444 bg !important
+		scrollbar-width: thin !important
+	}
+}
+
 /* text headers titles */
 .big-spots__header, .module-header, .module-header__btn.is-active,
 .gogmix__title, .product-row__title, .product-tile__title, .header__title>strong,
@@ -482,6 +520,14 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .edition-picker-list__item.is-selected .edition-picker-list__checkbox {
 	border-color: var(--textp);
 }
+
+.go-to-library-button {
+	background: var(--bg2);
+}
+.go-to-library-button:hover {
+	background: var(--bg-hover);
+}
+
 .product-actions {
 	background-color: rgba(39, 39, 39, 0.9);
 }
@@ -603,7 +649,8 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .goodies__icon--description, 
 .features-item__feature-icon, 
 .languages__icon--more-languages,
-.details__languages-icon {
+.details__languages-icon,
+.go-to-library-button__wrapper > svg {
 	filter: invert(1);
 }
 .languages__icon, .system-requirements-selector__icon, .goodies__icon--status {
@@ -745,6 +792,17 @@ img[src="https://items.gog.com/separator.jpg"] {
 .review__top-bar {
 	background-color: hsla(0, 0%, 50%, 0.2);
 }
+
+.critics-reviews-separator {
+	background: var(--border2);
+}
+.critic-review-card {
+	background: var(--bg2);
+}
+.critic-review-card__score {
+	background-color: #483009;
+}
+
 /* /redeem */
 .redeem-header__text {
 	color: var(--text1);
@@ -1262,7 +1320,7 @@ select {
 .menu-product--grid.is-owned .menu-product__content {
 	background: var(--bg3);
 }
-.menu-submenu, .menu-submenu::after, .menu {
+.menu-submenu, .menu-submenu::after, .layout .menu {
 	color: var(--text4) !important;
 	background: var(--bg2) !important;
 }
@@ -1355,45 +1413,71 @@ select {
 	color: var(--text1);
 }
 
+/* /blog */
+.preloader {
+	background: var(--bg);
+}
+body.custom-background {
+	background-color: var(--bg);
+}
+#masthead, .nav-affix .site-header .main-navigation {
+	background: var(--bg);
+}
+.navigation-area {
+	background-color: var(--bg)
+	border-bottom: 1px solid var(--border) !important;
+}
+a, a:active, a:visited, h1, h2, h3, h4, h5, h6, .entry-content .entry-title-medium a {
+	color: var(--text2);
+}
+a:hover {
+	color: var(--textp);
+}
+.article-details {
+	color: var(--text1);
+}
+.index-layout-1 .article-wraper > article .article-wrapper, .archive-layout-1 .article-wraper > article .article-wrapper {
+	background-color: var(--bg2);
+}
+.entry-meta-category a {
+	background-color: var(--bg2);
+	color: var(--text2);
+}
+body.right-sidebar #primary {
+	border-right: 1px solid var(--border2);
+}
+.twp-banner-details .post-thumbnail-corner {
+	border-color: transparent var(--border2) transparent transparent;
+}
+.site .navigation-area, .site-recommended, .footer-top, .footer-middle, .footer-bottom, .widget-title, .widget.widget_archive ul li, .widget.widget_categories ul li, .widget.widget_pages ul li, .widget.widget_meta ul li, .widget.widget_recent_comments ul li, .widget.widget_recent_entries ul li, .widget_block .wp-block-latest-posts li, .widget_block .wp-block-categories li, .widget_block .wp-block-archives li, .widget_block .wp-block-latest-comments li, .twp-widget-list li .article-list, .widget_nav_menu ul li a, .twp-author-details .author-ion, .site-related, .twp-banner-details, .related-items {
+	border-color: var(--border2);
+}
+.widget-title:after, .block-title:after {
+	background: var(--text1);
+}
+.ub_table-of-contents {
+	background-color: var(--bg2);
+	border: 1px solid var(--border2);
+}
+.author-info {
+	background: var(--bg2);
+}
+.site-header.data-bg .main-navigation {
+	background: var(--bg);
+}
 
 }
-@-moz-document regexp("https://.*.gog.com/(?!u|feed|profile).*") {
+
+@-moz-document regexp("https?:\/\/.*.gog\.com\/(?!u|feed|profile).*") {
 /* main background */
 html, body {
 	background: var(--bg);
 	color: var(--text1);
 }
 }
-@-moz-document regexp("https://www.gog.com/(?!mix).*") {
+
+@-moz-document regexp("https?:\/\/www.gog.com\/(?!mix).*") {
 .content, .wrapper {
 	background-color: var(--bg);
-}
-}
-@-moz-document url-prefix("https://www.gog.com/partner"), url-prefix("https://www.gog.com/reclaim"), url-prefix("https://www.gog.com/promo") {
-.content:before {
-	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, .3));
-	content: '';
-	position: absolute;
-	width: 100vw;
-	height: 100vw;
-}
-.container {
-	z-index: 10;
-	position: relative;
-}
-@media (min-width: 801px){
-.content:before {
-	background: linear-gradient(to top,var(--bg) 50%,rgba(0, 0, 0, 0.3));
-}
-}
-@media (min-width: 1367px) {
-.content:before {
-	background: linear-gradient(to top,var(--bg) 60%,rgba(0, 0, 0, 0.3));
-}
-}
-@media (min-width: 1681px) {
-.content:before {
-	background: linear-gradient(to top,var(--bg) 70%,rgba(0, 0, 0, 0.3));
-}
 }
 }
