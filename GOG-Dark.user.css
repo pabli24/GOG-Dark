@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         GOG.com - Dark Theme
 @namespace    https://github.com/pabli24/GOG-Dark
-@version      0.3.0
+@version      0.3.1
 @description  Dark Theme for GOG.com
 @author       Pabli (https://github.com/pabli24)
 @license      CC-BY-SA-4.0
@@ -64,7 +64,6 @@ body {
 }
 
 :root {
-// color-scheme: dark;
 	--bg:       bg1      // #1d1d1d;             #ccc
 	--bg2:      bg2      // #222;                #e1e1e1
 	--bg3:      bg3      // #1e1e1e;             #d2d2d2
@@ -411,11 +410,6 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 :not(.spinner-halloween) .catalog__search:after {
 	background-color: hsla(0, 0%, 5%, 0.8);
 }
-/* /promo */
-/* .promo-columns-wrapper {
-	background: var(--bg);
-	margin-top: 0;
-} */
 .header__title {
 	margin-top: 15px;
 	color: var(--textw);
@@ -970,7 +964,6 @@ div.big_post_left, div.big_post_right {
 	border: 1px solid #373737;
 }
 
-
 .game-details:after {
 	background: linear-gradient(to top,var(--bg) 20%,rgba(0, 0, 0, 0.50));
 	content: '';
@@ -1333,9 +1326,9 @@ select {
 .menu-product--grid.is-owned .menu-product__content {
 	background: var(--bg3);
 }
-.menu-submenu, .menu-submenu::after, .layout .menu {
+.menu-submenu:not(.menu-search), .menu-submenu:not(.menu-search)::after {
 	color: var(--text4) !important;
-	background: var(--bg2) !important;
+	background: var(--bg2);
 }
 .menu-header {
 	border-bottom: 1px solid var(--border3);
@@ -1435,6 +1428,23 @@ select {
 	color: var(--text1);
 }
 
+}
+
+@-moz-document regexp("https?:\/\/.*\.gog\.com\/(?!u|feed|profile).*") {
+/* main background */
+html, body {
+	background: var(--bg);
+	color: var(--text1);
+}
+}
+
+@-moz-document regexp("https?:\/\/www\.gog\.com\/(?!mix).*") {
+.content, .wrapper {
+	background-color: var(--bg);
+}
+}
+
+@-moz-document regexp("https?:\/\/www\.gog\.com\/blog.*") {
 /* /blog */
 .preloader {
 	background: var(--bg);
@@ -1486,20 +1496,5 @@ body.right-sidebar #primary {
 }
 .site-header.data-bg .main-navigation {
 	background: var(--bg);
-}
-
-}
-
-@-moz-document regexp("https?:\/\/.*.gog\.com\/(?!u|feed|profile).*") {
-/* main background */
-html, body {
-	background: var(--bg);
-	color: var(--text1);
-}
-}
-
-@-moz-document regexp("https?:\/\/www.gog.com\/(?!mix).*") {
-.content, .wrapper {
-	background-color: var(--bg);
 }
 }
