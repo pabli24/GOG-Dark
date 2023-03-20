@@ -1374,6 +1374,9 @@ select {
 .menu-submenu-item--hover:hover .menu-submenu-icon, .menu-submenu-item.is-active .menu-submenu-icon {
 	fill: #fff;
 }
+.menu-submenu-item--hover:hover .menu-submenu-item__label {
+	border: 1px solid var(--text4);
+}
 
 
 .menu-language-and-currency__footer {
