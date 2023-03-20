@@ -572,6 +572,9 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .title {
 	border-bottom: 1px solid var(--border2);
 }
+.details__link, .details__link-text {
+	border-bottom: 1px solid var(--text1);
+}
 .details__separator {
 	background: var(--border2);
 }
