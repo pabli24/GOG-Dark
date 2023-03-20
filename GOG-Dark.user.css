@@ -1096,6 +1096,9 @@ div.big_post_left, div.big_post_right {
 .no-friends__invite-button {
 	color: var(--text2);
 }
+.user-rectangle__dropdown-icon {
+	color: var(--text1);
+}
 /* /account/chat */
 
 /* /wallet */
