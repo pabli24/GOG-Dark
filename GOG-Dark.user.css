@@ -911,6 +911,10 @@ div.big_post_left, div.big_post_right {
 .user__data, .user__item--info, .user__item--status, .user__warning-item {
 	background: var(--bg2);
 	color: var(--text2);
+	border: 1px solid var(--border3);
+}
+.user__item ~ .user__item, .user__item ~ .user__items-group > .user__item:first-child {
+	border-top: 1px solid var(--border3);
 }
 .user__item--action:hover {
 	background: var(--bg-hover);
