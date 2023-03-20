@@ -1348,6 +1348,12 @@ select {
 .menu-notifications-empty__line, .menu-friends-empty__line, .menu-cart-empty__line {
 	background: var(--border3);
 }
+.menu-friend:hover {
+	background: var(--bg-hover);
+}
+.menu-friend__name {
+	color: var(--text4);
+}
 .menu-header__label {
 	color: var(--text4);
 }
