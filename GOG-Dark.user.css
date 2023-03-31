@@ -1347,6 +1347,15 @@ select {
 .menu-friend {
 	border-bottom: 1px solid var(--border3);
 }
+.menu-notification:not(.is-special):hover {
+	background: var(--bg-hover);
+}
+.menu-notification.is-new-chat-message .menu-notification__title-text--from-notifcation {
+	color: var(--text4);
+}
+.menu-notification__description {
+	color: var(--textp);
+}
 .menu-friend:hover {
 	background: var(--bg-hover);
 }
