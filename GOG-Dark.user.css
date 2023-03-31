@@ -1341,6 +1341,12 @@ select {
 .menu-notifications-empty__line, .menu-friends-empty__line, .menu-cart-empty__line {
 	background: var(--border3);
 }
+.menu-notification {
+	border-bottom: 1px solid var(--border3);
+}
+.menu-friend {
+	border-bottom: 1px solid var(--border3);
+}
 .menu-notification:not(.is-special):hover {
 	background: var(--bg-hover);
 }
