@@ -1380,6 +1380,20 @@ select {
 .menu-submenu-link {
 	color: var(--text4);
 }
+.menu-header__btn, .menu-cart-empty__btn {
+	background: var(--bg2);
+	color: var(--text1);
+}
+.menu-btn--gray:not(.is-spinning):not(.is-disabled):not([disabled]):hover, .menu-header__btn:hover, .menu-cart-empty__btn:hover {
+	background: var(--bg-hover);
+	color: var(--text1);
+}
+.menu-cart-empty__btn--wishlist {
+  background: #926b09;
+}
+.menu-cart-empty__btn--wishlist:hover {
+  background: #c89209;
+}
 .menu-cart-item__price {
 	color: var(--text4);
 }
