@@ -538,6 +538,9 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .product-actions-price__final-amount, .product-actions-price__giveaway, .product-actions-price__base-amount {
 	color: var(--text4);
 }
+.product-actions__lowest-price-before-discount {
+	color: var(--text3);
+}
 .productcard-slider-pagination__page-marker::before {
 	background: rgba(255, 255, 255, 0.2);
 }
