@@ -64,6 +64,7 @@ body {
 }
 
 :root {
+	color-scheme: dark;
 	--bg:       bg1      // #1d1d1d;             #ccc
 	--bg2:      bg2      // #222;                #e1e1e1
 	--bg3:      bg3      // #1e1e1e;             #d2d2d2
