@@ -174,13 +174,20 @@ if sb {
 	border-bottom: 1px solid var(--border3);
 }
 .menu-product:hover {
-	background: var(--bg-hover)
+	background: var(--bg-hover);
 }
 .highlighted {
 	background: #867400;
 }
 .menu-search__no-results {
 	background: var(--bg2);
+}
+.menu-search-empty__btn {
+	background: var(--bg2);
+	color: var(--text1);
+}
+.menu-search-empty__btn:hover {
+	background: var(--bg-hover);
 }
 /*  */
 .about-gog {
@@ -557,7 +564,7 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 	color: var(--text3)
 }
 .productcard-basics__separator {
-	background: var(--text3)
+	background: var(--text3);
 }
 .un--body-alt {
 	background-image: linear-gradient(to right,var(--text2),var(--text2));
