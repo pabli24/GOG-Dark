@@ -1480,7 +1480,22 @@ select {
 .promoted-articles-item__title {
 	color: var(--text1);
 }
-
+.game {
+	background-color: var(--bg1);
+	color: var(--text2);
+}
+.game__os img {
+	filter: invert(1);
+}
+.accordion__item-title:not(.accordion__item-title--active), .accordion__item-content {
+	border-bottom: 1px solid var(--border3);
+}
+.accordion__item-content {
+	background: var(--bg2);
+}
+.article__body a {
+	background-image: none;
+}
 }
 
 @-moz-document regexp("https?:\/\/.*\.gog\.com\/(?!u|feed|profile).*") {
