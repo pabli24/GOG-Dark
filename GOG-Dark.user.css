@@ -1655,8 +1655,7 @@ div.post_pointer:before {
 	height: 23px;
 	width: 35px;
 	background: #b73100;
-	/*clip-path: polygon(0% 0%, 75% 0, 100% 50%, 75% 100%, 0% 100%);*/
-	clip-path: path(M 25 0 C 35 11.5);
+	clip-path: polygon(0% 0%, 75% 0, 100% 50%, 75% 100%, 0% 100%);
 	position: relative;
 	margin: 2px 0 0 2px;
 	content: "";
