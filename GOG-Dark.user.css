@@ -1493,8 +1493,8 @@ select {
 .accordion__item-content {
 	background: var(--bg2);
 }
-.article__body a {
-	background-image: none;
+html body.brand-gog-com div.layout div.layout__main main div.container.article-page div.container-inner div.row.clearfix div.column.column--sm-8 article.article.clearfix div.article__body.markdown p a {
+	background-image: var(--bg2);
 }
 }
 
