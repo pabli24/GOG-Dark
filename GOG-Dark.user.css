@@ -1832,10 +1832,10 @@ div.sol_star:before {
 	color: #afcf00;
 	content: "★";
 }
-a.link_arow {
+a.link_arow, a.link_arrow {
 	background: none;
 }
-a.link_arow:before {
+a.link_arow:before, a.link_arrow:before {
 	display: inline-block;
 	height: 10px;
 	width: 11px;
@@ -1847,6 +1847,10 @@ a.link_arow:before {
 	font-size: 10px;
 	color: #333333;
 	content: "🡆";
+}
+a.link_arrow:before {
+	padding: 1px 0 0 1px;
+	font-style: normal;
 }
 .link_arow > img:nth-child(1) {
 	display: none;
@@ -2045,7 +2049,7 @@ div.title_1_EN:before {
 	color: var(--text3);
 	content: "Create new topic";
 }
-div.user_avatar_h {
+div.user_avatar_h, div.small_avatar_2_h {
 	background: none;
 }
 div.title_2_EN {
