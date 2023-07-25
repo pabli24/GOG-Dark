@@ -1165,7 +1165,7 @@ div.big_post_left, div.big_post_right {
 	color: var(--text1);
 }
 .dropdown {
-	background-color: var(--bg2);
+	background-color: transparent;
 }
 .dropdown__button {
 	background-color: var(--bg2);
