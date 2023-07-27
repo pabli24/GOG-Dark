@@ -1145,7 +1145,7 @@ div.big_post_left, div.big_post_right {
 .suggestions-list {
 	background-color: var(--border3);
 }
-.suggestion-room {
+.chat-view__conversation, .suggestion-room {
 	background-color: var(--bg);
 }
 .suggestion-room:hover {
