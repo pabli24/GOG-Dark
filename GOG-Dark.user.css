@@ -1775,6 +1775,21 @@ div.edit_EN:before {
 	text-align: center;
 	content: "✏️ edit";
 }
+div.r_t_y {
+	background: none;
+}
+div.r_t_y:before {
+	display: inline-block;
+	height: 19px;
+	width: 19px;
+	line-height: 19px;
+	position: relative;;
+	text-align: center;
+	font-style: normal;
+	font-size: 19px;
+	color: #ececec;
+	content: "⮌";
+}
 div.obrazek {
 	background: none;
 }
