@@ -328,7 +328,8 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .product-tile__price-discounted, .product-tile__price,
 .product-tile__no-buy-block-slug,
 .catalog__body--slide-desktop .product-tile__price-discounted,
-.catalog__body--slide-desktop .product-tile__no-buy-block-slug {
+.catalog__body--slide-desktop .product-tile__no-buy-block-slug,
+.product-tile--list.product-tile:hover .product-tile__title {
 	color: var(--text4);
 }
 .product-tile__platforms-item {
