@@ -1156,7 +1156,7 @@ div.sub_header_text_EN:before {
 	line-height: 23px;
 	position: relative;
 	text-align: center;
-	font-size: 23px;
+	font-size: 22px;
 	color: var(--text3);
 	content: "Community Discussions";
 }
