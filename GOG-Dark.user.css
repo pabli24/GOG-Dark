@@ -549,6 +549,9 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .product-actions__offer-ends-in, .product-actions__lowest-price-before-discount {
 	color: var(--text3);
 }
+.product-actions__promo-end-date {
+	border-bottom: 1px solid var(--border3);
+}
 .productcard-slider-pagination__page-marker::before {
 	background: rgba(255, 255, 255, 0.2);
 }
