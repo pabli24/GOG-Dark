@@ -580,6 +580,15 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .title {
 	border-bottom: 1px solid var(--border2);
 }
+.howlongtobeat-box {
+	background: var(--bg2);
+}
+.howlongtobeat-box__name, .howlongtobeat-box__time, .howlongtobeat-link {
+	color: var(--text1);
+}
+#hltb-main > g, #hltb-main-plus > g, #hltb-completionist > g, #hltb-combined > g {
+	stroke: var(--border3);
+}
 .details__link, .details__link-text {
 	border-bottom: 1px solid var(--text1);
 }
