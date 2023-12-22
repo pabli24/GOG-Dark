@@ -2837,6 +2837,10 @@ select {
 	border-bottom: 1px solid var(--border3);
 	background: var(--bg); //#f2f2f2
 }
+.menu-anonymous-header__btn--create-account {
+	background: var(--bg2);
+	color: var(--text1);
+}
 .menu-cart-item, .menu-notifications-empty, .menu-friends-empty, .menu-cart-empty {
 	background: var(--bg2);
 	color: var(--text3);
