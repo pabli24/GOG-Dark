@@ -268,6 +268,9 @@ if sb {
 .order__related-games .product-row.is-owned {
 	background: var(--bg3);
 }
+.article__related_topics .product-row:first-child {
+	border-top: 1px solid var(--bg3);
+}
 .product-tile__label--in-library {
 	background: hsla(0, 0%, 10%, 0.7);
 	color: var(--text3);
@@ -911,7 +914,7 @@ img[src="https://items.gog.com/separator.jpg"] {
 .article__related_topics .product-row.product-row--has-action:hover, .article__related_topics .product-row.product-row--has-card.is-owned:hover, .article__related_topics .product-row.product-row--has-card:hover {
 	background: var(--bg-hover);
 }
-.article__related_topics .product-row.is-owned {
+.article__related_topics .product-row.is-owned, .small-spots .product-row.is-owned {
 	background: var(--bg3);
 }
 .btn--gray {
