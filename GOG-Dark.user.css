@@ -2544,6 +2544,68 @@ div.big_post_left, div.big_post_right {
 	color: var(--text1);
 }
 /* /account/chat */
+.chat-view__sidebar {
+	background: #131313;
+}
+.room2__main {
+	background-color: #3d3d3d;
+}
+.room2.is-active .room2__main {
+	background-color: #6d6d6d;
+}
+.chat-view__conversation-header {
+	background: var(--bg2);
+}
+.chat-view__conversation {
+	color: var(--text4);
+}
+.suggestions-list {
+	background-color: var(--border3);
+}
+.chat-view__conversation, .suggestion-room {
+	background-color: var(--bg);
+}
+.suggestion-room:hover {
+	background-color: #2d2d2d;
+}
+.suggestion-room.is-selected {
+	background-color: #262626;
+}
+.suggestions-list__item:not(:first-of-type) {
+	border-top: 1px solid var(--border3);
+}
+.chat-view__conversation {
+	color: var(--text4);
+}
+.rectangle-dropdown-button {
+	border: 1px solid #373737;
+	color: var(--text1);
+}
+.dropdown {
+	background-color: transparent;
+}
+.dropdown__button {
+	background-color: var(--bg2);
+	border-color: var(--bg2);
+}
+.dropdown::after {
+	background: var(--bg2);
+}
+.dropdown__hr {
+	background-color: var(--border3);
+}
+.search-pane {
+	background-color: #2d2d2d;
+}
+.messages__scroll-wrapper::before {
+	background-image: none;
+}
+.messages, .chat-send-message__input {
+	background: #181818;
+}
+.chat-view__send-message, .chat-send-message__overlay {
+	background: #202020;
+}
 
 /* /wallet */
 .wallet-currency-selector__currency.is-active {
