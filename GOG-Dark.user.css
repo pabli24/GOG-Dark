@@ -1301,6 +1301,19 @@ div.lista_icon_2:before {
 	font-size: 15px
 	content: "📄"
 }
+div.lista_icon_4 {
+	background: bg3
+}
+div.lista_icon_4:before {
+	display: inline-block
+	height: 15px
+	width: 15px
+	line-height: 15px
+	position: relative
+	text-align: center
+	font-size: 15px
+	content: "🕑"
+}
 div.last_update_top {
 	background: bg2
 }
@@ -1377,15 +1390,15 @@ div.zielony_b, div.zielony_b_odd {
 	background-color: #84af15
 	clip-path: circle(6px)
 }
-div.czerwony_b_odd {
+div.czerwony_b, div.czerwony_b_odd {
 	background-color: #e16d29
 	clip-path: circle(6px)
 }
-div.niebieski_b_odd {
+div.niebieski_b, div.niebieski_b_odd {
 	background-color: #4f91ca
 	clip-path: circle(6px)
 }
-div.pomaranczowy_b_odd {
+div.pomaranczowy_b, div.pomaranczowy_b_odd {
 	background-color: #e1a023
 	clip-path: circle(6px)
 }
