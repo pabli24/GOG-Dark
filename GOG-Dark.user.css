@@ -290,6 +290,12 @@ body .catalog__body--slide-desktop:not(.catalog__body--list-view) .product-tile-
 .product-tile--list.product-tile:hover .product-tile__content {
 	background: bgh
 }
+symbol#button-wishlist path {
+	stroke: text4
+}
+symbol#button-wishlist path:hover {
+	stroke: #eca125
+}
 /* discover games */
 .section-title__title-wrapper {
 	color: text3
