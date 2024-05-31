@@ -2124,14 +2124,20 @@ div.btn_3:before {
 	content: "📎 attach"
 }
 .games_search_box {
-	background: #21282f
+	background: #333333
 	border: 1px solid rgba(0, 0, 0, .35)
+}
+.games_search_h, .games_search_dd {
+	background: linear-gradient(to bottom,#4b5153,#42464a)
 }
 .games_search_box > h4 {
 	color: text4
 }
-.tab.active, .btn_blue, .com_row_pop {
-	background: linear-gradient(to bottom,#3c4854,#21282f)
+.btn_blue, .com_row_pop, .vote_box > .count {
+	background: linear-gradient(to bottom,#333333,#272727)
+}
+#mainTemplateHolder > div.content_holder.wishedItem.active.show_wish > div.column.left > a, .vote_box > .count {
+	color: text4
 }
 .btn_vote > .icon, .vote_box_btn > .icon {
 	background-color: transparent
@@ -2302,8 +2308,16 @@ div.btn_3:before {
 	color: text4
 	content: "⏯"
 }
-.content_holder {
-	background: bg1
+body.noie.page_wishlist.user-loggded-in {
+	background: linear-gradient(to bottom, bg1 0%, bg1 116px, bg2 116px, bg2 100%)
+}
+.content_holder, .tab.active {
+	background: bg2
+}
+.no_more {
+	background: #333333
+	color: text4
+	border-color: #474f57
 }
 div.big_post_main, div.list_h {
 	background: bg2
