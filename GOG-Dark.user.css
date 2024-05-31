@@ -819,8 +819,17 @@ img[src="https://items.gog.com/separator.jpg"] {
 	color: text2
 	background: #2d2d2d
 }
-.not-eligible-text[data-v-08e189b5], .select-products-text[data-v-76553c1e], .title[data-v-3ef69486], .price__final[data-v-3ef69486], .operating-system[data-v-3ef69486], .gifter-text[data-v-76553c1e], .user[data-v-41926b43] {
+.not-eligible-text[data-v-08e189b5], .select-products-text[data-v-76553c1e], .title[data-v-3ef69486], .price__final[data-v-3ef69486], .operating-system[data-v-3ef69486], .product-type[data-v-3ef69486], .gifter-text[data-v-76553c1e], .user[data-v-41926b43] {
 	color: text3 i
+}
+.select-products-checkbox[data-v-76553c1e]:checked::after, .select-products-checkbox[data-v-76553c1e]:checked::before, .select-products-checkbox[data-v-76553c1e]:indeterminate:not(:checked)::before, .select-checkbox[data-v-3ef69486]:checked::after, .select-checkbox[data-v-3ef69486]:checked::before {
+	background-color: text2 i
+}
+.select-checkbox[data-v-3ef69486] {
+	border: 1px solid text4
+}
+.select-products-checkbox[data-v-76553c1e]:not([disabled]):hover, .select-checkbox[data-v-3ef69486]:not([disabled]):hover {
+	border-color: textw
 }
 .product-tile-wrapper[data-v-3ef69486] {
 	background: bg2
