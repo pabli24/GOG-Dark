@@ -1930,6 +1930,26 @@ div.s_list_text_1:before {
 div.for_user_ava {
 	background: none
 }
+span.t_u_star {
+	background: none
+	font-size: 12px
+	margin-top: -3px
+}
+span.t_u_s_1:before {
+	content: "★"
+}
+span.t_u_s_2:before {
+	content: "★★"
+}
+span.t_u_s_3:before {
+	content: "★★★"
+}
+span.t_u_s_4:before {
+	content: "★★★★"
+}
+span.t_u_s_5:before {
+	content: "★★★★★"
+}
 div.s_list_text_2:before {
 	display: inline-block
 	height: 18px
@@ -1966,6 +1986,12 @@ div.col_s_b_2:before {
 	position: relative
 	text-align: center
 	content: "⚪"
+}
+.gog_btn.white {
+	background: bgh
+	color: text1
+	text-shadow: none
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px rgba(70,70,70,0.35),inset 0 0 1px rgba(255,255,255,0.15),0 1px 3px rgba(0,0,0,0.35)
 }
 div.n_b_t_search_h_EN {
 	background: #202020
@@ -2122,6 +2148,12 @@ div.btn_3:before {
 	position: relative
 	text-align: center
 	content: "📎 attach"
+}
+.gog_btn {
+	background: #555252
+	color: text1
+	text-shadow: none
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.1),inset 0 1px rgba(70,70,70,0.35),inset 0 0 1px rgba(255,255,255,0.15),0 1px 3px rgba(0,0,0,0.35)
 }
 .games_search_box {
 	background: #21282f
