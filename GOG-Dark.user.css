@@ -1226,6 +1226,13 @@ div.n_b_t_left_1, div.n_b_t_left_1_1 {
 div.nav_bar_top, div.nav_bar_bottom, div.n_b_b_left, div.n_b_b_right, div.n_b_t_opt_EN, div.list_top_h, div.forum_descr_left, div.forum_descr_right, div.n_b_b_left_1, div.n_b_b_main, div.n_b_b_right_1, .post_options, div.s_n_b_t_left_bottom, div.n_b_t_right_3, div.s_n_b_t_left, div.n_b_t_right_2, div.list_top_h_1 {
 	background: bg2
 }
+span.topic_locked_1 {
+	padding: 0 0 0 0
+	background: bg2
+}
+span.topic_locked_1:before {
+	content: "🔒"
+}
 div.n_b_t_search_btn_EN {
 	background: bg2
 }
