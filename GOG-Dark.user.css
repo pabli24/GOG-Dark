@@ -157,6 +157,9 @@ if sb {
 .highlighted {
 	background: #867400
 }
+.menu-search__product-wishlist svg {
+	stroke: text4
+}
 .menu-search__no-results {
 	background: bg2
 }
