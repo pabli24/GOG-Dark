@@ -1237,7 +1237,7 @@ div.n_b_t_left_1, div.n_b_t_left_1_1 {
 	background-color: #202020
 }
 .n_b_t_main_1 > .forum_fade {
-	background-image: -moz-linear-gradient(left,rgba(71,71,71,0),#202020)
+	background-image: none
 }
 .thread_view .n_b_t_main_1 {
 	border-right: 17px solid #202020
