@@ -2901,7 +2901,7 @@ select {
 .menu-notification:not(.is-special):hover {
 	background: bgh
 }
-.menu-notification.is-new-chat-message .menu-notification__title-text--from-notifcation {
+.menu-notification.is-new-chat-message .menu-notification__title-text--from-notifcation, .menu-notification .menu-notification__title-text--announcement {
 	color: text4
 }
 .menu-notification__description {
