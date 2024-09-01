@@ -881,6 +881,9 @@ img[src="https://items.gog.com/separator.jpg"] {
 .article-section__title, .article__secondary_title {
 	color: text2
 }
+.article__body {
+	background: none
+}
 .article__body a {
 	background-image: linear-gradient(90deg,text1,text1)
 }
@@ -2916,10 +2919,10 @@ select {
 }
 
 /* support.gog.com */
-.article__body {
+body > div.layout > div.layout__main > main > div > div > div:nth-child(2) > div.column.column--sm-8 > article > div.article__body.markdown {
 	background: bg2
 }
-.article__body a {
+body > div.layout > div.layout__main > main > div > div > div:nth-child(2) > div.column.column--sm-8 > article > div.article__body.markdown > p > a, body > div.layout > div.layout__main > main > div > div > div:nth-child(2) > div.column.column--sm-8 > article > div.article__body.markdown > ol > li:nth-child(3) > a, body > div.layout > div.layout__main > main > div > div > div:nth-child(2) > div.column.column--sm-8 > article > div.article__body.markdown > p > span > a, body > div.layout > div.layout__main > main > div > div > div:nth-child(2) > div.column.column--sm-8 > article > div.article__body.markdown > p > strong > span > a {
 	background-image: none
 }
 
