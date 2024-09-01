@@ -1794,6 +1794,19 @@ div.r_t_y:before {
 	color: #ececec
 	content: "⮌"
 }
+div.spinacz {
+	background: none
+}
+div.spinacz:before {
+	display: inline-block
+	height: 20px
+	width: 17px
+	line-height: 20px
+	position: relative
+	text-align: center
+	font-size: 16px
+	content: "📎"
+}
 div.obrazek {
 	background: none
 }
