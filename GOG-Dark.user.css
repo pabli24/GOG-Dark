@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name         GOG.com - Dark Theme
 @namespace    https://github.com/pabli24/GOG-Dark
-@version      0.4.1
+@version      0.4.2
 @description  Dark Theme for GOG.com
 @author       Pabli (https://github.com/pabli24)
 @license      CC-BY-SA-4.0
 @homepageURL  https://github.com/pabli24/GOG-Dark
 @supportURL   https://github.com/pabli24/GOG-Dark/issues
 @preprocessor stylus
-@var          checkbox forum    "Forum Theme (for 'carbon' color scheme)" 1
+@var          checkbox forum    "Forum Theme for 'carbon' color scheme (you can change skin in gog.com/forum/mysettings)" 1
 @var          checkbox sb       "Dark scrollbar"   1
 @var          color    bg1      "Background 1"     #1d1d1d
 @var          color    bg2      "Background 2"     #222
@@ -114,7 +114,6 @@ if sb {
 	//firefox, chrome 121+
 	html {
 		scrollbar-color: #444 bg i
-		scrollbar-width: thin i
 	}
 }
 
@@ -2541,11 +2540,38 @@ i.ic.icon-linux {
 	color: text2
 }
 /* /checkout */
-.form__row-key--small-print {
+.form__row-key--small-print, .promo-code-label {
 	color: text3
 }
-.form__row, .free-wallet {
+.form__row, .free-wallet, .promo-code {
 	border-top: 1px solid border1
+}
+.promo-code-wrapper {
+	border-bottom: 1px solid border1
+}
+.promo-code-input {
+	border: 1px solid border3
+	background: bg3
+	&:focus-visible {
+		outline: 1px solid border3
+	}
+}
+input::placeholder, .input::placeholder {
+	color: inherit
+	opacity: 0.625
+}
+.adyen-checkout__label__text, .adyen-checkout__helper-text, .adyen-checkout__checkbox__label, .adyen-checkout__blik__helper {
+	color: #dfecff;
+}
+.adyen-checkout__input {
+	color: #fff;
+	caret-color: #b5d2ff;
+	background: bg3
+	border: 1px solid border3
+}
+.adyen-checkout__input:active, .adyen-checkout__input:focus, .adyen-checkout__input--focus, .adyen-checkout__input:active:hover, .adyen-checkout__input:focus:hover, .adyen-checkout__input--focus:hover {
+  border: 1px solid border3
+  box-shadow: 0 0 0 2px border3
 }
 .form__row--interactive:hover {
 	background: bgh
@@ -2579,7 +2605,29 @@ i.ic.icon-linux {
 .order-message {
 	border-top: 1px dashed border3
 }
-
+.order__games .product-row.is-highlighted {
+  background: #2b2309
+}
+.order-message--error, .order-message.buy-button-message {
+  border-color: rgba(82, 57, 0, .5)
+  background: #2b2309
+  color: #fff
+}
+.order-message--error .order-message__icon {
+  fill: #bc8300
+}
+.order-message__icon svg {
+  filter: brightness(3)
+}
+.label__icon {
+  border: 1px solid #202020;
+  background-color: #666;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.1),inset 0 0 0 4px #666;
+}
+.adyen-checkout__checkbox__input + .adyen-checkout__checkbox__label::after {
+  background-color: #666;
+  border: 1px solid #202020;
+}
 /* /work */
 .sta_container h1 {
 	color: textw
@@ -3113,4 +3161,26 @@ body.right-sidebar #primary {
 	background-color: rgba(255, 255, 255, .1)
 }
 
+}
+@-moz-document url-prefix("https://checkoutshopper-live.adyen.com") {
+/* /checkout credit card input (Stylus options -> Enable "Expose iframes via HTML[stylus-iframe]") */
+[stylus-iframe="https://www.gog.com"] {
+	.input-field {
+		color: #fff
+		background: bg3
+		&:placeholder-shown {
+			color: #fff
+		}
+		&::placeholder {
+			color: inherit
+			opacity: 0.625
+		}
+		&::focus-visible, &::focus {
+			outline: 1px solid border3
+		}
+	}
+	.chckt-input-field--error {
+		color: rgb(168, 201, 255)
+	}
+}
 }
